@@ -1,0 +1,45 @@
+@import './styles/tokens.css';
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 var(--fs-body)/1.4 var(--font);
+  scrollbar-color: var(--line) var(--ground);
+}
+::selection { background: var(--blue); color: #fff; }
+
+/* orbit home fills exactly one screen */
+.home {
+  box-sizing: border-box;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 16px;
+  overflow: hidden;
+}
+
+/* view transition: the clicked orbit card grows into the room hero */
+::view-transition-group(room-hero) { animation-duration: .7s; animation-timing-function: var(--ease); }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .45s; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+/* top + bottom bars */
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding-block: 14px;
+  font: 500 var(--fs-bar)/1.4 var(--font);
+  letter-spacing: var(--tracking); text-transform: uppercase; color: var(--muted);
+}
+.bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 20px; }
+.bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+.bar a:hover, .bar a:focus-visible { color: var(--blue); border-color: currentColor; outline: none; }
+.th { display: block; margin-top: 2px; font-size: var(--fs-bar-th); letter-spacing: 0; text-transform: none; }
+.touch { display: none; }
+@media (hover: none) { .mouse { display: none; } .touch { display: inline; } }
+@media (max-width: 600px) {
+  .tagline, .site { display: none; }
+  .bar, .bar nav { justify-content: center; }
+}
