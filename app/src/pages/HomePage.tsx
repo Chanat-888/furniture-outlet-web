@@ -1,6 +1,7 @@
 import { OrbitStage } from '../components/OrbitStage'
 import { ContactDock } from '../components/ContactDock'
 import { SocialSection } from '../components/SocialSection'
+import { AddressSection } from '../components/AddressSection'
 import { FollowCue } from '../components/FollowCue'
 
 export function HomePage() {
@@ -27,6 +28,7 @@ export function HomePage() {
       </div>
 
       <SocialSection />
+      <AddressSection />
       <FollowCue />
       <ContactDock />
     </div>
