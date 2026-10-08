@@ -11,6 +11,8 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/category/:id', element: <CategoryPage /> },
+      // lazy so the Supabase client only loads on this page
+      { path: '/signup', lazy: async () => ({ Component: (await import('./pages/SignupPage')).SignupPage }) },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },

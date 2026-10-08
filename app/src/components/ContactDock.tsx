@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { links } from './contactLinks'
+import { Link } from 'react-router'
+import { account, links } from './contactLinks'
 import './ContactDock.css'
 
 export function ContactDock() {
@@ -12,6 +13,11 @@ export function ContactDock() {
           <svg viewBox="0 0 24 24" aria-hidden="true">{l.icon}</svg>
         </a>
       ))}
+      {open && (
+        <Link className="dock-btn dock-account" to={account.to} aria-label={account.label} title={account.label}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">{account.icon}</svg>
+        </Link>
+      )}
       <button type="button" className="dock-toggle" onClick={() => setOpen(!open)}
         aria-expanded={open} aria-label={open ? 'ซ่อนช่องทางติดต่อ' : 'แสดงช่องทางติดต่อ'}>
         <i><svg viewBox="0 0 24 24" aria-hidden="true">

@@ -10,3 +10,10 @@ export const links = [
   { key: 'tiktok', label: 'TikTok', href: CONTACT.tiktok,
     icon: <path d="M16.600 3h-3.100v12.300a2.700 2.700 0 1 1-2.700-2.700c.3 0 .5 0 .8.100V9.500a5.800 5.800 0 1 0 5 5.700V9a7 7 0 0 0 4 1.300V7.200A4.200 4.200 0 0 1 16.600 3z" /> },
 ]
+
+// Account entry sits beside the contact icons; it is an in-app route, not an external link.
+export const account = {
+  label: 'เข้าสู่ระบบ · สมัครสมาชิก',
+  to: '/signup',
+  icon: <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.700 0-8 1.300-8 4v2h16v-2c0-2.700-5.300-4-8-4z" />,
+}
