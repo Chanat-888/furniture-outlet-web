@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
+import { accountPath } from '../lib/accountPath'
 import { account, links } from './contactLinks'
 import './ContactDock.css'
 
@@ -14,7 +15,7 @@ export function ContactDock() {
         </a>
       ))}
       {open && (
-        <Link className="dock-btn dock-account" to={account.to} aria-label={account.label} title={account.label}>
+        <Link className="dock-btn dock-account" to={accountPath()} aria-label={account.label} title={account.label}>
           <svg viewBox="0 0 24 24" aria-hidden="true">{account.icon}</svg>
         </Link>
       )}

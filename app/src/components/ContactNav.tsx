@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { accountPath } from '../lib/accountPath'
 import { account, links } from './contactLinks'
 
 export function ContactNav() {
@@ -10,7 +11,7 @@ export function ContactNav() {
           <svg viewBox="0 0 24 24" aria-hidden="true">{l.icon}</svg>
         </a>
       ))}
-      <Link to={account.to} aria-label={account.label} title={account.label}>
+      <Link to={accountPath()} aria-label={account.label} title={account.label}>
         <svg viewBox="0 0 24 24" aria-hidden="true">{account.icon}</svg>
       </Link>
     </nav>
