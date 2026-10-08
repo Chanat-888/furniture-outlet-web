@@ -1,9 +1,9 @@
+import { ContactFab } from '../components/ContactFab'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { categories } from '../data/categories'
 import { filters as allFilters, products, PRICES_AS_OF } from '../data/products'
 import { CONTACT } from '../data/contact'
-import { ContactNav } from '../components/ContactNav'
 import { Arrow } from '../components/Arrow'
 import { ProductCard } from '../components/ProductCard'
 import { RoomIcon } from '../components/RoomIcon'
@@ -88,7 +88,6 @@ export function CategoryPage() {
           <Link to="/" viewTransition className="hero-brand" aria-label="Furniture Outlet — หน้าแรก">
             <span lang="en">Furniture Outlet</span>
           </Link>
-        <ContactNav />
         </header>
 
         <div className="hero-title">
@@ -173,6 +172,7 @@ export function CategoryPage() {
           <b>{next.th}<Arrow dir="right" /></b><i lang="en">{next.en}</i>
         </Link>
       </nav>
+      <ContactFab />
     </div>
   )
 }
