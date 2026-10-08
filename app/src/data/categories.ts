@@ -16,7 +16,7 @@ const fill = 'fill="currentColor"'
 const link = (path: string) => BASE + encodeURI(path)
 
 export const categories: Category[] = [
-  { id: 'bedroom', label: 'ห้องนอน', th: 'ห้องนอน', en: 'Bed Room', sub: ['ชุดห้องนอน', 'เตียง', 'ตู้เสื้อผ้า', 'โต๊ะเครื่องแป้ง', 'ตู้วางทีวี', 'ตู้กระจก', 'ตู้ข้างเตียง', 'ที่นอน', 'สตูล & ม้านั่ง', 'ชุดห้องนอนเด็ก'],
+  { id: 'bedroom', label: 'ห้องนอน', th: 'ห้องนอน', en: 'Bedroom', sub: ['ชุดห้องนอน', 'เตียง', 'ตู้เสื้อผ้า', 'โต๊ะเครื่องแป้ง', 'ตู้วางทีวี', 'ตู้กระจก', 'ตู้ข้างเตียง', 'ที่นอน', 'สตูล & ม้านั่ง', 'ชุดห้องนอนเด็ก'],
     photo: 'https://images.unsplash.com/photo-1600210491305-7396500b5b31', credit: 'Collov Home Design',
     href: link('ห้องนอน/64112a8fc6227700139b30c4'),
     icon: `<path d="M10 16v34M54 32v18"/><rect x="10" y="34" width="44" height="8"/><rect x="14" y="27" width="12" height="7" ${fill}/>` },
