@@ -1,3 +1,4 @@
+import { AccountNav } from '../components/AccountNav'
 import { ContactFab } from '../components/ContactFab'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
@@ -88,6 +89,7 @@ export function CategoryPage() {
           <Link to="/" viewTransition className="hero-brand" aria-label="Furniture Outlet — หน้าแรก">
             <span lang="en">Furniture Outlet</span>
           </Link>
+          <AccountNav />
         </header>
 
         <div className="hero-title">
