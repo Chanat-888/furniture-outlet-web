@@ -157,7 +157,7 @@ export function CategoryPage() {
       </section>
 
       <section className="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">ถูกใจชิ้นไหน ทักมาคุยกันได้</h2>
+        <h2 id="contact-title">Furniture Outlet ครบจบที่เดียว</h2>
         <p lang="en">Ask about stock, delivery and today’s price</p>
         <div className="contact-actions">
           <a className="btn btn-white" href={LINE} target="_blank" rel="noopener">LINE {CONTACT.lineId}</a>
