@@ -14,7 +14,7 @@ export function FollowCue() {
 
   return (
     <a className={`follow-cue${seen ? ' gone' : ''}`} href="#social" aria-hidden={seen} tabIndex={seen ? -1 : 0}>
-      <span>Follow us<small>ติดตามเรา</small></span>
+      <span>Contact us<small>ติดต่อเรา</small></span>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
     </a>
   )
