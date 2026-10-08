@@ -1,6 +1,7 @@
 import { OrbitStage } from '../components/OrbitStage'
 import { ContactDock } from '../components/ContactDock'
 import { SocialSection } from '../components/SocialSection'
+import { FollowCue } from '../components/FollowCue'
 
 export function HomePage() {
   return (
@@ -21,14 +22,12 @@ export function HomePage() {
               <span className="touch">แตะเพื่อดูรายละเอียด · แตะอีกครั้งเพื่อเลือกซื้อ</span>
             </span>
           </span>
-          <span>
-            <a href="#social">Follow us ↓</a>
-            <a className="site" href="https://www.furniture-outletshop.com/" target="_blank" rel="noopener">furniture-outletshop.com ↗</a>
-          </span>
+          <a className="site" href="https://www.furniture-outletshop.com/" target="_blank" rel="noopener">furniture-outletshop.com ↗</a>
         </footer>
       </div>
 
       <SocialSection />
+      <FollowCue />
       <ContactDock />
     </div>
   )

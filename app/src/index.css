@@ -37,7 +37,6 @@ html { scroll-behavior: smooth; }
 }
 .bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 20px; }
 .bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
-.bar a + a { margin-left: 20px; }
 .bar a:hover, .bar a:focus-visible { color: var(--brand); border-color: currentColor; outline: none; }
 .th { display: block; margin-top: 2px; font-size: var(--fs-bar-th); letter-spacing: 0; text-transform: none; }
 .touch { display: none; }
