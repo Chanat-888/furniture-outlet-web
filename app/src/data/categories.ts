@@ -23,7 +23,7 @@ export const categories: Category[] = [
   { id: 'living', label: 'ห้องนั่งเล่น', th: 'ห้องนั่งเล่น', en: 'Living Room', sub: ['ตู้วางทีวี', 'ตู้เก็บของ', 'ตู้โชว์', 'ชั้นวางหนังสือ', 'ตู้รองเท้า', 'โต๊ะทำงาน', 'เก้าอี้พักผ่อน', 'โซฟา'],
     photo: 'https://images.unsplash.com/photo-1636206508343-a6c955887476', credit: 'nuddle',
     href: link('ห้องนั่งเล่น/64112a96c6227700139b30d2'),
-    icon: `<rect x="12" y="10" width="40" height="26"/><rect x="17" y="15" width="30" height="16" ${fill}/><path d="M32 36v6"/><rect x="8" y="42" width="48" height="10"/><path d="M14 52v6M50 52v6"/>` },
+    icon: `<rect x="18" y="12" width="28" height="22"/><rect x="6" y="26" width="12" height="22"/><rect x="46" y="26" width="12" height="22"/><rect x="18" y="34" width="28" height="14" ${fill}/><path d="M10 48v6M54 48v6"/>` },
   { id: 'office', label: 'ห้องทำงาน', th: 'ห้องทำงาน', en: 'Home Office', sub: ['โต๊ะทำงาน', 'ชั้นวางหนังสือ', 'เก้าอี้สำนักงาน', 'โต๊ะประชุม', 'ชุดโต๊ะทำงาน', 'ตู้เก็บของสำนักงาน'],
     photo: 'https://images.unsplash.com/photo-1596022326953-84f20bfebb77', credit: 'Sven Brandsma',
     href: link('ห้องทำงาน/64112a9c6202f50013e07db0'),
