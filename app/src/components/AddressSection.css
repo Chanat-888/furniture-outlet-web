@@ -12,6 +12,9 @@
 .address-text p { margin: 8px 0 0; color: var(--muted); line-height: 1.7; }
 .branch-list { list-style: none; margin: 0; padding: 0; width: 100%; display: flex; flex-direction: column; gap: 20px; }
 .branch-list li { min-width: 0; }
+.address-text .branch-extra { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 2px; }
+.branch-extra a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.branch-extra a:hover { color: var(--brand); }
 .address-cta {
   display: grid; max-width: 100%; padding: 12px 20px; border-radius: 4px;
   background: var(--brand); color: #fff; font-weight: 600; line-height: 1.4; text-decoration: none;
