@@ -32,7 +32,7 @@ export const categories: Category[] = [
     photo: 'https://images.unsplash.com/photo-1745794621090-d856c53b0cc2', credit: 'Clay Banks',
     href: link('ห้องอาหารและห้องครัว/64112aa16202f50013e07dbe'),
     icon: `<rect x="12" y="26" width="40" height="6" ${fill}/><path d="M16 32v22M48 32v22M6 18v36M6 42h8M58 18v36M58 42h-8"/>` },
-  { id: 'storage', label: 'ตู้โชว์', th: 'ห้องเก็บของ', en: 'Storage', sub: ['ตู้โชว์เอนกประสงค์', 'ตู้โชว์กระจก', 'KC-PLAY', 'ตู้วางทีวี'],
+  { id: 'storage', label: 'ตู้โชว์', th: 'ตู้โชว์', en: 'Storage', sub: ['ตู้โชว์เอนกประสงค์', 'ตู้โชว์กระจก', 'KC-PLAY', 'ตู้วางทีวี'],
     photo: 'https://images.unsplash.com/photo-1652517209166-f17a2742a5fe', credit: 'Allison Saeng',
     href: link('ห้องเก็บของ/64112aa76202f50013e07dcc'),
     icon: `<rect x="12" y="8" width="40" height="44"/><path d="M32 8v44M12 24h40M12 38h40"/><rect x="17" y="15" width="10" height="9" ${fill}/><rect x="38" y="12" width="8" height="12" ${fill}/><rect x="20" y="30" width="7" height="8" ${fill}/><rect x="37" y="29" width="9" height="9" ${fill}/><path d="M16 52v6M48 52v6"/>` },
