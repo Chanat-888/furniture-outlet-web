@@ -8,12 +8,23 @@
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
   border: 1px solid var(--line); border-radius: 12px; background: var(--card);
 }
-.address-text h2 { margin: 0 0 12px; font-size: 1.5rem; }
-.address-text p { margin: 0; color: var(--muted); line-height: 1.7; }
+.address-text h2 { margin: 0 0 20px; font-size: 1.5rem; }
+.address-text p { margin: 8px 0 0; color: var(--muted); line-height: 1.7; }
+.branch-list { list-style: none; margin: 0; padding: 0; width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.branch-list li { min-width: 0; }
+.address-text .branch-extra { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 2px; }
+.branch-extra a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.branch-extra a:hover { color: var(--brand); }
 .address-cta {
-  display: inline-block; margin-top: 20px; padding: 10px 20px; border-radius: 4px;
-  background: var(--brand); color: #fff; font-weight: 600; text-decoration: none;
+  display: grid; max-width: 100%; padding: 12px 20px; border-radius: 4px;
+  background: var(--brand); color: #fff; font-weight: 600; line-height: 1.4; text-decoration: none;
+  transition: background .2s var(--ease);
 }
+.address-cta > span { grid-area: 1 / 1; transition: opacity .2s var(--ease); }
+.cta-open { opacity: 0; }
+.address-cta:hover, .address-cta:focus-visible { background: #111; }
+.address-cta:hover .cta-name, .address-cta:focus-visible .cta-name { opacity: 0; }
+.address-cta:hover .cta-open, .address-cta:focus-visible .cta-open { opacity: 1; }
 .address-map {
   flex: 1 1 420px; min-width: 0; height: 360px;
   border: 1px solid var(--line); border-radius: 12px; background: var(--card);
