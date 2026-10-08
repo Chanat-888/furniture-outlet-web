@@ -84,7 +84,11 @@ export function OrbitStage() {
           ref={(el) => { boxRefs.current[i] = el }} />
       ))}
       <div className="ring" ref={ringRef} />
-      <img className="logo" alt="Furniture Outlet" src="/logo.png" />
+      <div className="logo" role="img" aria-label="Furniture Outlet">
+        <img className="logo-part logo-top" alt="" src="/logo.png" />
+        <img className="logo-part logo-line" alt="" src="/logo.png" />
+        <img className="logo-part logo-bottom" alt="" src="/logo.png" />
+      </div>
     </main>
   )
 }
