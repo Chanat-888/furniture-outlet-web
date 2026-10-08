@@ -1,7 +1,7 @@
 import { CONTACT } from '../data/contact'
 import './AddressSection.css'
 
-const mapSrc = 'https://www.google.com/maps?output=embed&q=' + encodeURIComponent(CONTACT.address)
+const mapSrc = 'https://www.google.com/maps?output=embed&q=' + CONTACT.mapCoords
 
 export function AddressSection() {
   return (

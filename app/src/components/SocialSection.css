@@ -1,6 +1,7 @@
 .social {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 32px;
-  padding-block: 120px 64px;
+  max-width: 1200px; margin: 120px auto 32px; padding: 32px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
 }
 .social-tiktok { flex: 1 1 480px; max-width: 780px; min-width: 0; }
 .social-tiktok .tiktok-embed { margin: 0 !important; max-width: 100% !important; min-width: 0 !important; }
