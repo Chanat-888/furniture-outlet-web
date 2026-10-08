@@ -1,18 +1,15 @@
 import { OrbitStage } from '../components/OrbitStage'
+import { ContactDock } from '../components/ContactDock'
 
 export function HomePage() {
   return (
     <div className="home">
       <header className="bar">
         <span className="tagline">Furniture for every room</span>
-        <nav>
-          <a href="https://www.facebook.com/furnituresoutlet" target="_blank" rel="noopener">Facebook</a>
-          <a href="http://line.me/ti/p/~@djp4480q" target="_blank" rel="noopener">LINE</a>
-          <a href="tel:0868886163">086 888 6163</a>
-        </nav>
       </header>
 
       <OrbitStage />
+      <ContactDock />
 
       <footer className="bar">
         <span>

@@ -7,7 +7,7 @@ body {
   font: 400 var(--fs-body)/1.4 var(--font);
   scrollbar-color: var(--line) var(--ground);
 }
-::selection { background: var(--blue); color: #fff; }
+::selection { background: var(--brand); color: #fff; }
 
 /* orbit home fills exactly one screen */
 .home {
@@ -35,7 +35,7 @@ body {
 }
 .bar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 20px; }
 .bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
-.bar a:hover, .bar a:focus-visible { color: var(--blue); border-color: currentColor; outline: none; }
+.bar a:hover, .bar a:focus-visible { color: var(--brand); border-color: currentColor; outline: none; }
 .th { display: block; margin-top: 2px; font-size: var(--fs-bar-th); letter-spacing: 0; text-transform: none; }
 .touch { display: none; }
 @media (hover: none) { .mouse { display: none; } .touch { display: inline; } }

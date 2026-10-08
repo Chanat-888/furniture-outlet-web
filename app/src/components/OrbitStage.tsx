@@ -4,8 +4,8 @@ import { categories } from '../data/categories'
 import { Box } from './Box'
 import './OrbitStage.css'
 
-// motion: boxes spin at the centre -> circle grows to R while spin slows -> slow orbit
-const SLOW = 0.11, FAST = 11 // rad/s (SLOW = one lap per ~57s)
+// motion: boxes spin one full lap at the centre while the circle grows to R -> slow orbit
+const SLOW = 0.11 // rad/s (one lap per ~57s)
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v))
 const inOut = (p: number) => (p < 0.5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2)
 const out = (p: number) => 1 - (1 - p) ** 3
@@ -30,22 +30,24 @@ export function OrbitStage() {
       R = Math.max(0, m / 2 - s / 2 - 6); HS = Math.max(168, s * 1.25)
       stage.style.setProperty('--s', s + 'px')
       stage.style.setProperty('--hs', HS + 'px')
-      stage.style.setProperty('--lw', Math.min(320, Math.max(90, (R - s / 2) * 1.25)) + 'px')
+      stage.style.setProperty('--lw', Math.min(380, Math.max(110, (R - s / 2) * 1.5)) + 'px')
       ring.style.width = ring.style.height = 2 * R + 'px'
     }
     const ro = new ResizeObserver(size)
     ro.observe(stage); size()
 
     const still = matchMedia('(prefers-reduced-motion: reduce)').matches
-    let t = still ? 9 : 0, th = 0, k = 1, last = performance.now(), raf = 0
+    let t = still ? 9 : 0, th = 0, th0 = 0, // th0: slow-orbit angle
+       k = 1, last = performance.now(), raf = 0
 
     const frame = (now: number) => {
       const dt = Math.min(0.05, (now - last) / 1e3); last = now; t += dt
       const pr = inOut(clamp((t - 0.7) / 3.2)), sc = 0.3 + 0.7 * out(clamp((t - 0.7) / 2)), op = clamp(t / 0.5)
-      const w = still ? 0 : SLOW + (FAST - SLOW) * (1 - clamp(t / 4.2)) ** 3
       const h = stage.querySelector('.box:hover,.box:focus-visible,.box.on') // pause orbit while a box is held
       k += ((h && t > 4.2 ? 0 : 1) - k) * Math.min(1, dt * 6)
-      th += w * k * dt
+      // intro: exactly one lap, easing out to a stop; then the slow orbit takes over
+      if (!still && t > 4.2) th0 += SLOW * k * dt
+      th = (still ? 0 : 2 * Math.PI * out(clamp(t / 4.2))) + th0
       ring.style.scale = String(pr); ring.style.opacity = String(op)
       const hw = HS / 2
       boxes.forEach((b, i) => {

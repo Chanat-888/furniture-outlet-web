@@ -1,0 +1,8 @@
+export const CONTACT = {
+  phoneLabel: '039-303-304',
+  phoneHref: 'tel:039303304',
+  lineId: '@furnitureoutlet',
+  lineHref: 'https://line.me/R/ti/p/@furnitureoutlet',
+  facebook: 'https://www.facebook.com/furnituresoutlet',
+  tiktok: 'https://www.tiktok.com/@furniture_outlet',
+}

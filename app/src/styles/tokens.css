@@ -1,11 +1,11 @@
 /* Design tokens — extracted from design/reference.html :root */
 :root {
-  --ground: #ebebeb; /* same grey as the logo file */
-  --card: #f7f7f9;
-  --ink: #0b0b1c;
-  --muted: #6a6a7a;
-  --line: #c6c6d0;
-  --blue: #0000ff; /* logo blue */
+  --ground: #f6f2ee; /* warm paper, lets the transparent logo sit on the page */
+  --card: #fcfaf8;
+  --ink: #1c1517; /* the logo's black rule, warmed */
+  --muted: #75686b;
+  --line: #ddd3d1;
+  --brand: #e11a45; /* logo red */
   --ease: cubic-bezier(.2, .7, .2, 1);
 
   /* sizes — --s / --hs / --lw are overwritten at runtime by OrbitStage */
@@ -25,7 +25,7 @@
 
   /* category page */
   --on-photo: #fff;
-  --scrim: 11, 11, 28; /* ink as rgb, for photo scrims */
+  --scrim: 28, 21, 23; /* ink as rgb, for photo scrims */
   --fs-display: clamp(3rem, 10vw, 6rem);
   --fs-h2: clamp(1.5rem, 3.2vw, 2.25rem);
   --fs-price: 1.125rem;

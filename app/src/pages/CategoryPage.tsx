@@ -2,13 +2,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { categories } from '../data/categories'
 import { filters as allFilters, products, PRICES_AS_OF } from '../data/products'
+import { CONTACT } from '../data/contact'
+import { ContactNav } from '../components/ContactNav'
 import { Arrow } from '../components/Arrow'
 import { ProductCard } from '../components/ProductCard'
 import { RoomIcon } from '../components/RoomIcon'
 import './CategoryPage.css'
 
-const LINE = 'http://line.me/ti/p/~@djp4480q'
-const TEL = 'tel:0868886163'
+const LINE = CONTACT.lineHref
+const TEL = CONTACT.phoneHref
 const photo = (base: string, w: number) => `${base}?w=${w}&q=72&auto=format&fit=crop`
 
 export function CategoryPage() {
@@ -84,13 +86,9 @@ export function CategoryPage() {
             <span>ทุกห้อง<small>All rooms</small></span>
           </Link>
           <Link to="/" viewTransition className="hero-brand" aria-label="Furniture Outlet — หน้าแรก">
-            <img src="/mark-white.png" alt="" width="287" height="512" />
             <span lang="en">Furniture Outlet</span>
           </Link>
-          <nav aria-label="ติดต่อ">
-            <a href={LINE} target="_blank" rel="noopener">LINE</a>
-            <a href={TEL}>086 888 6163</a>
-          </nav>
+        <ContactNav />
         </header>
 
         <div className="hero-title">
@@ -161,9 +159,9 @@ export function CategoryPage() {
         <h2 id="contact-title">ถูกใจชิ้นไหน ทักมาคุยกันได้</h2>
         <p lang="en">Ask about stock, delivery and today’s price</p>
         <div className="contact-actions">
-          <a className="btn btn-white" href={LINE} target="_blank" rel="noopener">LINE @djp4480q</a>
-          <a className="btn btn-line" href={TEL}>โทร 086 888 6163</a>
-          <a className="btn btn-line" href="https://www.facebook.com/furnituresoutlet" target="_blank" rel="noopener">Facebook</a>
+          <a className="btn btn-white" href={LINE} target="_blank" rel="noopener">LINE {CONTACT.lineId}</a>
+          <a className="btn btn-line" href={TEL}>โทร {CONTACT.phoneLabel}</a>
+          <a className="btn btn-line" href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a>
         </div>
       </section>
 

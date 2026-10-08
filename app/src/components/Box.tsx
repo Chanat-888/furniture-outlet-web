@@ -23,7 +23,7 @@ export function Box({ item, on, onClick, ref }: Props) {
         <span className="back">
           <b>{item.th}</b>
           <i>{item.en}</i>
-          {item.sub.map((s) => <span key={s}>{s}</span>)}
+          <span className="subs">{item.sub.map((s) => <span key={s}>{s}</span>)}</span>
           <em>ดูสินค้า →</em>
         </span>
       </span>

@@ -20,8 +20,8 @@ A browsing front door for Furniture Outlet: the orbit home page presents the eig
 - Product data (names, images, prices, links) is a snapshot of furniture-outletshop.com taken 25 Sep 2026 (first page per category) in `app/src/data/products.ts`; no live feed yet. Never invent prices or claims.
 
 ## Brand Commitments
-- Name: Furniture Outlet. Logo: blue (#0000FF) isometric chair + wordmark, `app/public/logo.png`.
-- Contact: Facebook `furnituresoutlet`, LINE `@djp4480q`, phone 086 888 6163, site furniture-outletshop.com.
+- Name: Furniture Outlet. Logo: red (#E11A45) "FURNITURE OUTLET" wordmark with a black rule, transparent PNG at `app/public/logo.png` (recoloured from the client JPG). Page colours around it are a warm paper palette.
+- Contact: Facebook `furnituresoutlet`, TikTok `@furniture_outlet`, LINE `@furnitureoutlet`, phone 039-303-304 (all in `app/src/data/contact.ts`), site furniture-outletshop.com.
 - Existing visual language of the orbit home page is binding (tokens in `app/src/styles/tokens.css`).
 
 ## Evidence on Hand
