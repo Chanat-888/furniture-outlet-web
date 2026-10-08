@@ -49,6 +49,19 @@ export function SignupPage() {
 
   const userId = session?.user.id
 
+  // Coming back from a provider page without logging in (back button, closed tab) restores
+  // this page with the buttons still disabled; turn them back on.
+  useEffect(() => {
+    const reset = () => setBusy(false)
+    const onVisible = () => { if (document.visibilityState === 'visible') reset() }
+    window.addEventListener('pageshow', reset)
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      window.removeEventListener('pageshow', reset)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
+  }, [])
+
   // ~290 KB of Thai province data, fetched only when someone reaches the address step.
   useEffect(() => {
     if (step === 3 && !tree.length) import('../data/thaiAddress.json').then((m) => setTree(m.default as Tree))
