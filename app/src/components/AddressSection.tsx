@@ -24,6 +24,7 @@ const branches: Branch[] = [
     address: 'เลขที่ 108 หมู่ 11 ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว 27160',
     href: mapsSearch('PCGW+7X ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว'),
     mapQuery: 'PCGW+7X ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว',
+    photos: ['/sakaeo-1/image.jpg', '/sakaeo-2/image.jpg'],
     phone: '037-247-247',
     facebook: 'https://www.facebook.com/FURNITUREOUTLETSAKAEO/',
   },
