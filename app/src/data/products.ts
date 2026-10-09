@@ -164,7 +164,6 @@ export const products: Record<string, Product[]> = {
     {"name": "โซฟาฟังก์ชั่น BRIO ปรับนอนได้ สีเทาเข้ม พร้อมสตูล", "sub": "โซฟา", "img": "/products/living/n042.webp", "price": 0, "size": "225 x 90-160 x 90 cm.", "color": "เทาเข้ม"},
   ],
   office: [
-    {"name": "โต๊ะทำงานเข้ามุม 1 ลิ้นชัก 2 บานเปิด Deamon", "sub": "โต๊ะทำงาน", "img": "/products/office/p054.webp", "price": 3790, "size": "โต๊ะใหญ่ 180 x 60 x 76 ซม. โต๊ะเล็ก 80 x 60 x 76 ซม.", "color": "สีโอ๊ค/เทา"},
     {"name": "เก้าอี้เกมมิ่ง Nubwo 26678", "sub": "เก้าอี้เกมมิ่ง", "img": "/products/office/p117.webp", "price": 3290, "size": "50 x 60 x 125-135 ซม.", "color": "ดำ-แดง"},
     {"name": "เก้าอี้เกมมิ่ง Nubwo 26679", "sub": "เก้าอี้เกมมิ่ง", "img": "/products/office/p118.webp", "price": 3290, "size": "50 x 60 x 125-135 ซม.", "color": "เทา-ขาว"},
     {"name": "เก้าอี้เกมมิ่ง FHA-12JT", "sub": "เก้าอี้เกมมิ่ง", "img": "/products/office/p119.webp", "price": 4500, "size": "60 x 68 x 130-140 ซม.", "color": "ดำ"},
