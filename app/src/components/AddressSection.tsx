@@ -5,16 +5,17 @@ import './AddressSection.css'
 const embedSrc = (q: string) => 'https://www.google.com/maps?output=embed&q=' + encodeURIComponent(q).replace(/%2C/g, ',')
 const mapsSearch = (q: string) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q)
 
-type Branch = { name: string; address: string; href: string; mapQuery: string; phone?: string; facebook?: string; website?: string }
+type Branch = { name: string; address: string; href: string; mapQuery: string; photos?: string[]; phone?: string; facebook?: string; website?: string }
 
 // One entry per branch. Add the address and a direct Google Maps link (href) when they are known.
 const branches: Branch[] = [
-  { name: 'Koncept เฟอร์นิเจอร์ เอาท์เล็ท(เมืองจันทบุรี)', address: CONTACT.address, href: CONTACT.mapHref, mapQuery: CONTACT.mapCoords },
+  { name: 'Koncept เฟอร์นิเจอร์ เอาท์เล็ท(เมืองจันทบุรี)', address: CONTACT.address, href: CONTACT.mapHref, mapQuery: CONTACT.mapCoords, photos: ['/image.jpg', '/shop-2/image.jpg'] },
   {
     name: 'Koncept Furniture เขาไร่ยา,จันทบุรี',
     address: 'เลขที่ 230/1 ท่าช้าง เทศบาลเมืองท่าช้าง เมือง จันทบุรี 22000',
     href: mapsSearch('M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี'),
     mapQuery: 'M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี',
+    photos: ['/khao-raiya/image.jpg'],
     phone: '039-471-234',
     website: 'https://www.furniture-outletshop.com/',
   },
@@ -23,6 +24,7 @@ const branches: Branch[] = [
     address: 'เลขที่ 108 หมู่ 11 ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว 27160',
     href: mapsSearch('PCGW+7X ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว'),
     mapQuery: 'PCGW+7X ตำบลผักขะ อำเภอวัฒนานคร สระแก้ว',
+    photos: ['/sakaeo-1/image.jpg', '/sakaeo-2/image.jpg'],
     phone: '037-247-247',
     facebook: 'https://www.facebook.com/FURNITUREOUTLETSAKAEO/',
   },
@@ -30,6 +32,8 @@ const branches: Branch[] = [
 
 export function AddressSection() {
   const [mapQuery, setMapQuery] = useState(branches[0].mapQuery)
+  const current = branches.find((b) => b.mapQuery === mapQuery)
+  const photos = current?.photos
   return (
     <section className="address" aria-label="Find us">
       <div className="address-text">
@@ -67,8 +71,17 @@ export function AddressSection() {
           })}
         </ul>
       </div>
-      <iframe className="address-map" title="Shop location map" src={embedSrc(mapQuery)}
+      <div className="address-side">
+        <iframe className="address-map" title="Shop location map" src={embedSrc(mapQuery)}
         loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+        {photos && (
+          <div className="shop-photos">
+            {photos.map((src, i) => (
+              <img key={src} src={src} alt={current?.name + ' รูปที่ ' + (i + 1)} loading="lazy" />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   )
 }
