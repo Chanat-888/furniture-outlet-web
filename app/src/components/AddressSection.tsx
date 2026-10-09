@@ -15,6 +15,7 @@ const branches: Branch[] = [
     address: 'เลขที่ 230/1 ท่าช้าง เทศบาลเมืองท่าช้าง เมือง จันทบุรี 22000',
     href: mapsSearch('M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี'),
     mapQuery: 'M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี',
+    photos: ['/khao-raiya/image.jpg'],
     phone: '039-471-234',
     website: 'https://www.furniture-outletshop.com/',
   },
@@ -30,7 +31,8 @@ const branches: Branch[] = [
 
 export function AddressSection() {
   const [mapQuery, setMapQuery] = useState(branches[0].mapQuery)
-  const photos = branches.find((b) => b.mapQuery === mapQuery)?.photos
+  const current = branches.find((b) => b.mapQuery === mapQuery)
+  const photos = current?.photos
   return (
     <section className="address" aria-label="Find us">
       <div className="address-text">
@@ -74,7 +76,7 @@ export function AddressSection() {
         {photos && (
           <div className="shop-photos">
             {photos.map((src, i) => (
-              <img key={src} src={src} alt={'ร้านสาขาจันทบุรี รูปที่ ' + (i + 1)} loading="lazy" />
+              <img key={src} src={src} alt={current?.name + ' รูปที่ ' + (i + 1)} loading="lazy" />
             ))}
           </div>
         )}
