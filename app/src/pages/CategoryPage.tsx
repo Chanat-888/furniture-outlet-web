@@ -6,6 +6,7 @@ import { categories } from '../data/categories'
 import { products, PRICES_AS_OF } from '../data/products'
 import { CONTACT } from '../data/contact'
 import { Arrow } from '../components/Arrow'
+import { BannerSlider } from '../components/BannerSlider'
 import { ProductCard } from '../components/ProductCard'
 import { RoomIcon } from '../components/RoomIcon'
 import './CategoryPage.css'
@@ -109,51 +110,58 @@ export function CategoryPage() {
         <small className="hero-credit" lang="en">Photo: {c.credit} / Unsplash</small>
       </section>
 
-      <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
-        <div className="shelf-head">
-          <h2 id="shelf-title">สินค้าทั้งหมด</h2>
-          {items.length > 0 && <p>{items.length} รายการ · ราคา ณ {PRICES_AS_OF} จากโปสเตอร์ร้าน</p>}
-        </div>
-
-        {items.length > 0 && chips.length > 0 && (
-          <div className="chips" role="group" aria-label="กรองตามประเภท">
-            <button type="button" aria-pressed={!active} onClick={() => setFilter(null)}>
-              ทั้งหมด <span>{items.length}</span>
-            </button>
-            {chips.map((f) => f.n > 0 ? (
-              <button type="button" key={f.label} aria-pressed={active?.label === f.label} onClick={() => setFilter(f.label)}>
-                {f.label} <span>{f.n}</span>
-              </button>
-            ) : (
-              <a key={f.label} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">
-                {f.label} <Arrow dir="out" />
-              </a>
-            ))}
+      {c.id === 'builtin' ? (
+        <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
+          <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
+          <BannerSlider slides={items} label="ตัวอย่างงาน Built-in" />
+        </section>
+      ) : (
+        <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
+          <div className="shelf-head">
+            <h2 id="shelf-title">สินค้าทั้งหมด</h2>
+            {items.length > 0 && <p>{items.length} รายการ · ราคา ณ {PRICES_AS_OF} จากโปสเตอร์ร้าน</p>}
           </div>
-        )}
 
-        {items.length > 0 ? (
-          <>
-            <div className="grid" ref={gridRef}>
-              {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
-            </div>
-            <a className="shelf-more" href={c.href} target="_blank" rel="noopener">
-              ดู{c.th}ทั้งหมดที่ furniture-outletshop.com <Arrow dir="out" />
-            </a>
-          </>
-        ) : (
-          <div className="empty">
-            <RoomIcon icon={c.icon} className="empty-icon" />
-            <h3>ยังไม่มีสินค้าออนไลน์ในหมวดนี้</h3>
-            <p>สินค้า{c.th}มีให้ดูที่หน้าร้าน ทักไลน์มาถามรุ่นและราคาได้เลย</p>
-            <div className="chips empty-subs" role="group" aria-label="ประเภทสินค้าในหมวดนี้ (เปิดเว็บไซต์ร้าน)">
-              {c.sub.map((s) => (
-                <a key={s} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">{s} <Arrow dir="out" /></a>
+          {items.length > 0 && chips.length > 0 && (
+            <div className="chips" role="group" aria-label="กรองตามประเภท">
+              <button type="button" aria-pressed={!active} onClick={() => setFilter(null)}>
+                ทั้งหมด <span>{items.length}</span>
+              </button>
+              {chips.map((f) => f.n > 0 ? (
+                <button type="button" key={f.label} aria-pressed={active?.label === f.label} onClick={() => setFilter(f.label)}>
+                  {f.label} <span>{f.n}</span>
+                </button>
+              ) : (
+                <a key={f.label} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">
+                  {f.label} <Arrow dir="out" />
+                </a>
               ))}
             </div>
-          </div>
-        )}
-      </section>
+          )}
+
+          {items.length > 0 ? (
+            <>
+              <div className="grid" ref={gridRef}>
+                {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
+              </div>
+              <a className="shelf-more" href={c.href} target="_blank" rel="noopener">
+                ดู{c.th}ทั้งหมดที่ furniture-outletshop.com <Arrow dir="out" />
+              </a>
+            </>
+          ) : (
+            <div className="empty">
+              <RoomIcon icon={c.icon} className="empty-icon" />
+              <h3>ยังไม่มีสินค้าออนไลน์ในหมวดนี้</h3>
+              <p>สินค้า{c.th}มีให้ดูที่หน้าร้าน ทักไลน์มาถามรุ่นและราคาได้เลย</p>
+              <div className="chips empty-subs" role="group" aria-label="ประเภทสินค้าในหมวดนี้ (เปิดเว็บไซต์ร้าน)">
+                {c.sub.map((s) => (
+                  <a key={s} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">{s} <Arrow dir="out" /></a>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
       <section className="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Furniture Outlet ครบจบที่เดียว</h2>
