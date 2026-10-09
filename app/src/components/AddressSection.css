@@ -46,3 +46,4 @@
 .address-side .address-map { flex: none; width: 100%; }
 .shop-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .shop-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); display: block; }
+.shop-photos:has(> img:only-child) { grid-template-columns: 1fr; }
