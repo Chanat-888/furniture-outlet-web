@@ -14,6 +14,8 @@ import './CategoryPage.css'
 
 const LINE = CONTACT.lineHref
 const TEL = CONTACT.phoneHref
+// LINE-member promo banner (QR links to the same LINE page); slides on every room page
+const MEMBER = { img: '/products/member-line-3.webp', name: 'สมัครสมาชิกผ่าน LINE ลด 3% — แอด LINE @furnitureoutlet', href: CONTACT.lineHref }
 const photo = (base: string, w: number) => `${base}?w=${w}&q=72&auto=format&fit=crop`
 
 export function CategoryPage() {
@@ -120,7 +122,7 @@ export function CategoryPage() {
       {c.id === 'builtin' ? (
         <>
           <section className="shelf shelf-banners" ref={listRef} aria-label="แบนเนอร์ Built-in">
-            <BannerSlider slides={banners} label="แบนเนอร์ Built-in" />
+            <BannerSlider slides={[...banners, MEMBER]} label="แบนเนอร์ Built-in" />
           </section>
           <section className="shelf shelf-works" aria-labelledby="shelf-title">
             <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
@@ -130,7 +132,11 @@ export function CategoryPage() {
           </section>
         </>
       ) : (
-        <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
+        <>
+        <section className="shelf shelf-banners" ref={listRef} aria-label="โปรโมชันสมาชิก LINE">
+          <BannerSlider slides={[MEMBER]} label="โปรโมชันสมาชิก LINE" />
+        </section>
+        <section className="shelf shelf-works" aria-labelledby="shelf-title">
           <div className="shelf-head">
             <h2 id="shelf-title">สินค้าทั้งหมด</h2>
             {items.length > 0 && <p>{items.length} รายการ · ราคา ณ {PRICES_AS_OF} จากโปสเตอร์ร้าน</p>}
@@ -175,6 +181,7 @@ export function CategoryPage() {
             </div>
           )}
         </section>
+        </>
       )}
 
       <section className="contact" aria-labelledby="contact-title">

@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import type { Product } from '../data/products'
 import { Arrow } from './Arrow'
 
 const AUTOPLAY_MS = 5000
 
-export function BannerSlider({ slides, label }: { slides: Product[]; label: string }) {
+export type Slide = { img: string; name: string; href?: string }
+
+export function BannerSlider({ slides, label }: { slides: Slide[]; label: string }) {
   const track = useRef<HTMLDivElement>(null)
   const [i, setI] = useState(0)
   const [paused, setPaused] = useState(false)
@@ -36,7 +37,10 @@ export function BannerSlider({ slides, label }: { slides: Product[]; label: stri
         }}>
         {slides.map((s, n) => (
           <div className="slide" key={s.img} role="group" aria-roledescription="สไลด์" aria-label={`${n + 1} จาก ${slides.length}`}>
-            <img src={s.img} alt={s.name} loading={n ? 'lazy' : undefined} decoding="async" draggable={false} />
+            {(() => {
+              const img = <img src={s.img} alt={s.name} loading={n ? 'lazy' : undefined} decoding="async" draggable={false} />
+              return s.href ? <a href={s.href} target="_blank" rel="noopener" aria-label={s.name}>{img}</a> : img
+            })()}
           </div>
         ))}
       </div>
