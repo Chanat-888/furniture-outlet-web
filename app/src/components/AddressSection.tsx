@@ -15,7 +15,7 @@ const branches: Branch[] = [
     address: 'เลขที่ 230/1 ท่าช้าง เทศบาลเมืองท่าช้าง เมือง จันทบุรี 22000',
     href: mapsSearch('M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี'),
     mapQuery: 'M38W+V2 ตำบลแสลง อำเภอเมืองจันทบุรี จันทบุรี',
-    photos: ['/khao-raiya/image.jpg'],
+    photos: ['/khao-raiya/image.jpg', '/khao-raiya-2/image.jpg'],
     phone: '039-471-234',
     website: 'https://www.furniture-outletshop.com/',
   },
