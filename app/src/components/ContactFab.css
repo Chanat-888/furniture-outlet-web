@@ -87,6 +87,13 @@
   transform: translate(0, -50%);
   font-weight: 600;
 }
+.fab-main { cursor: pointer; }
+.fab-tip-main { transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, color 0.2s ease; }
+.fab-main:hover .fab-tip-main,
+.fab-main:focus-visible .fab-tip-main {
+  background: #111;
+  color: #fff;
+}
 
 /* main button: brand red, soft pulse rings while the others are hidden */
 .fab-main {

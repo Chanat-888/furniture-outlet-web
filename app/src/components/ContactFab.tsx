@@ -5,7 +5,7 @@ import './ContactFab.css'
 
 // floating contact buttons for the room pages; the main button hides / shows the rest
 export function ContactFab() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   return (
     <aside className={'fab' + (open ? ' open' : '')} aria-label="ติดต่อเรา">
       <ul className="fab-list" id="fab-list" aria-hidden={!open}>
