@@ -5,7 +5,6 @@ import { Link, Navigate, useParams } from 'react-router'
 import { categories } from '../data/categories'
 import { filters as allFilters, products, PRICES_AS_OF } from '../data/products'
 import { CONTACT } from '../data/contact'
-import { fbPhotos, fbSrc } from '../data/fbPhotos'
 import { Arrow } from '../components/Arrow'
 import { ProductCard } from '../components/ProductCard'
 import { RoomIcon } from '../components/RoomIcon'
@@ -26,7 +25,6 @@ export function CategoryPage() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   const items = products[id ?? ''] ?? []
-  const fb = fbPhotos[id ?? ''] ?? []
   // every sub-category from the home card, plus product-type filters; types with no product here link to the shop
   const chips = useMemo(() => {
     const defs = allFilters[id ?? ''] ?? []
@@ -152,22 +150,6 @@ export function CategoryPage() {
             <div className="chips empty-subs" role="group" aria-label="ประเภทสินค้าในหมวดนี้ (เปิดเว็บไซต์ร้าน)">
               {c.sub.map((s) => (
                 <a key={s} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">{s} <Arrow dir="out" /></a>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {fb.length > 0 && (
-          <div className="fb">
-            <div className="shelf-head">
-              <h2>ล่าสุดจาก Facebook</h2>
-              <p>{fb.length} โปสเตอร์ · ตั้งแต่ 6 เม.ย. 2569 · ราคาและโปรโมชันตามโพสต์ ทักไลน์ถามราคาปัจจุบันได้</p>
-            </div>
-            <div className="fb-grid">
-              {fb.map((n) => (
-                <a key={n} className="fb-tile" href={CONTACT.facebook} target="_blank" rel="noopener" aria-label="ดูโพสต์บน Facebook">
-                  <img src={fbSrc(n)} alt="" width="206" height="206" loading="lazy" decoding="async" />
-                </a>
               ))}
             </div>
           </div>
