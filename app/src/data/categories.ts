@@ -40,4 +40,8 @@ export const categories: Category[] = [
     photo: 'https://images.unsplash.com/photo-1719324923613-ff0884b031ed', credit: 'Tile Merchant Ireland',
     href: link('บริเวณนอกบ้านและสวน/64112aac6202f50013e07de6'),
     icon: `<path d="M6 28C10 14 21 8 32 8s22 6 26 20z"/><path d="M32 8c-5 5-8 12-8 20h16c0-8-3-15-8-20z" ${fill}/><path d="M32 28v26M22 54h20"/>` },
+{ id: 'builtin', label: 'ชุด Built-in', th: 'ชุด Built-in', en: 'Built-in Furniture', sub: ['ตู้เสื้อผ้าบิวท์อิน', 'ตู้ครัวบิวท์อิน', 'ตู้วางทีวีบิวท์อิน', 'ตู้รองเท้าบิวท์อิน'],
+photo: 'https://images.unsplash.com/photo-1643949914877-b20f30792c1e', credit: 'Bilal Mansuri',
+href: BASE,
+icon: `<rect x="10" y="8" width="44" height="46"/><path d="M32 8v46M10 18h44"/><path d="M27 30v8M37 30v8"/><path d="M14 54v4M50 54v4"/>` },
 ]
