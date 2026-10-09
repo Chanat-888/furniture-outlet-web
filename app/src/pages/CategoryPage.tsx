@@ -3,7 +3,7 @@ import { ContactFab } from '../components/ContactFab'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { categories } from '../data/categories'
-import { filters as allFilters, products, PRICES_AS_OF } from '../data/products'
+import { products, PRICES_AS_OF } from '../data/products'
 import { CONTACT } from '../data/contact'
 import { Arrow } from '../components/Arrow'
 import { ProductCard } from '../components/ProductCard'
@@ -25,15 +25,14 @@ export function CategoryPage() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   const items = products[id ?? ''] ?? []
-  // every sub-category from the home card, plus product-type filters; types with no product here link to the shop
-  const chips = useMemo(() => {
-    const defs = allFilters[id ?? ''] ?? []
-    const all = [...defs, ...(c?.sub ?? []).filter((s) => !defs.some((f) => f.label === s)).map((s) => ({ label: s, match: [s] }))]
-    return all.map((f) => ({ ...f, n: items.filter((p) => f.match.some((m) => p.name.includes(m))).length }))
-  }, [id, items, c])
+  // chips come from the category's sub-categories; counts match on each product's sub
+  const chips = useMemo(
+    () => (c?.sub ?? []).map((label) => ({ label, n: items.filter((p) => p.sub === label).length })),
+    [items, c],
+  )
   const revealed = useRef(new Set<string>())
   const active = chips.find((f) => f.label === filter && f.n > 0)
-  const shown = active ? items.filter((p) => active.match.some((m) => p.name.includes(m))) : items
+  const shown = active ? items.filter((p) => p.sub === active.label) : items
 
   useEffect(() => { setFilter(null) }, [id])
   useEffect(() => { if (c) document.title = `${c.th} — Furniture Outlet` }, [c])
@@ -113,7 +112,7 @@ export function CategoryPage() {
       <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
         <div className="shelf-head">
           <h2 id="shelf-title">สินค้าทั้งหมด</h2>
-          {items.length > 0 && <p>{items.length} รายการ · ราคา ณ {PRICES_AS_OF} จากหน้าร้านออนไลน์</p>}
+          {items.length > 0 && <p>{items.length} รายการ · ราคา ณ {PRICES_AS_OF} จากโปสเตอร์ร้าน</p>}
         </div>
 
         {items.length > 0 && chips.length > 0 && (
@@ -136,7 +135,7 @@ export function CategoryPage() {
         {items.length > 0 ? (
           <>
             <div className="grid" ref={gridRef}>
-              {shown.map((p) => <ProductCard key={p.href} p={p} icon={c.icon} />)}
+              {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
             </div>
             <a className="shelf-more" href={c.href} target="_blank" rel="noopener">
               ดู{c.th}ทั้งหมดที่ furniture-outletshop.com <Arrow dir="out" />

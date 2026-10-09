@@ -11,7 +11,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
   const [copied, setCopied] = useState(false)
   const dialog = useRef<HTMLDialogElement>(null)
   const off = p.was ? Math.round((1 - p.price / p.was) * 100) : 0
-  const { size, color } = productSpecs(p.name)
+  const { size, color } = productSpecs(p)
   const message = `สอบถามเพิ่มเติมเกี่ยวกับ ${p.name}`
 
   // LINE can pre-fill the chat box; Messenger cannot, so copy the text first and let the customer paste it.
@@ -42,7 +42,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
         </span>
       </button>
 
-      <dialog ref={dialog} className="pd" aria-labelledby={'pd-' + p.href}
+      <dialog ref={dialog} className="pd" aria-labelledby={'pd-' + p.img}
         onClick={(e) => { if (e.target === dialog.current) dialog.current.close() }}>
         <button type="button" className="pd-close" aria-label="ปิด" onClick={() => dialog.current?.close()}>
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"
@@ -50,7 +50,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
         </button>
         <div className="pd-pic">{pic}</div>
         <div className="pd-info">
-          <h2 id={'pd-' + p.href} className="pd-name">{p.name}</h2>
+          <h2 id={'pd-' + p.img} className="pd-name">{p.name}</h2>
           <dl className="pd-specs">
             <div><dt>ขนาด</dt><dd>{size ?? '-'}</dd></div>
             <div><dt>สี</dt><dd>{color ?? '-'}</dd></div>
