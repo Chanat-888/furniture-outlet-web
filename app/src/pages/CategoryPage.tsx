@@ -26,6 +26,9 @@ export function CategoryPage() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   const items = products[id ?? ''] ?? []
+  // Built-in: the two ad banners (first in the data) slide on top; the rest are shown as cards under the title
+  const banners = items.slice(0, 2)
+  const works = items.slice(2)
   // chips come from the category's sub-categories; counts match on each product's sub
   const chips = useMemo(
     () => (c?.sub ?? []).map((label) => ({ label, n: items.filter((p) => p.sub === label).length })),
@@ -111,10 +114,17 @@ export function CategoryPage() {
       </section>
 
       {c.id === 'builtin' ? (
-        <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
-          <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
-          <BannerSlider slides={items} label="ตัวอย่างงาน Built-in" />
-        </section>
+        <>
+          <section className="shelf shelf-banners" ref={listRef} aria-label="แบนเนอร์ Built-in">
+            <BannerSlider slides={banners} label="แบนเนอร์ Built-in" />
+          </section>
+          <section className="shelf shelf-works" aria-labelledby="shelf-title">
+            <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
+            <div className="grid" ref={gridRef}>
+              {works.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
+            </div>
+          </section>
+        </>
       ) : (
         <section className="shelf" ref={listRef} aria-labelledby="shelf-title">
           <div className="shelf-head">
