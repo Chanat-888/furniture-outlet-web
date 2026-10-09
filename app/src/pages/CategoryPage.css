@@ -289,3 +289,75 @@
 /* Built-in: banner slider sits above the titled list, so the two sections share one rhythm */
 .shelf-banners { padding-bottom: 0; }
 .shelf-works { padding-top: clamp(40px, 6vw, 72px); }
+
+/* ---------- product pop-up: zoomable picture ---------- */
+.pd-zoom { all: unset; position: relative; display: grid; place-items: center; box-sizing: border-box; width: 100%; height: 100%; cursor: zoom-in; }
+.pd-zoom:focus-visible { outline: 2px solid var(--brand); outline-offset: -4px; }
+.pd-zoom-hint {
+  position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 36px; height: 36px;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--card); color: var(--ink);
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.pd-zoom:hover .pd-zoom-hint, .pd-zoom:focus-visible .pd-zoom-hint { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+/* full-screen viewer, a nested modal dialog so Esc closes only this layer */
+.zoom {
+  position: fixed; inset: 0; width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0;
+  background: rgba(var(--scrim), .94); color: #fff; overflow: hidden;
+}
+.zoom[open] { display: block; animation: pd-fade .25s var(--ease-out) both; }
+.zoom::backdrop { background: none; }
+.zoom-view { position: absolute; inset: 60px 0 80px; display: flex; overflow: auto; scrollbar-width: thin; overscroll-behavior: contain; }
+.zoom-view:focus-visible { outline: 2px solid var(--on-photo); outline-offset: -4px; }
+.zoom-view img { margin: auto; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; user-select: none; }
+.zoom-view.zoomed img { flex: none; max-width: none; max-height: none; cursor: grab; }
+.zoom-btn {
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 50%; background: rgba(var(--scrim), .6); color: #fff; cursor: pointer;
+  transition: background .2s var(--ease), border-color .2s var(--ease), opacity .2s;
+}
+.zoom-btn:hover:not(:disabled), .zoom-btn:focus-visible { background: var(--brand); border-color: var(--brand); outline: none; }
+.zoom-btn:disabled { opacity: .35; cursor: default; }
+.zoom-close { position: absolute; top: 8px; right: 12px; }
+.zoom-bar {
+  position: absolute; bottom: 16px; left: 50%; translate: -50% 0; display: flex; align-items: center; gap: 8px;
+  padding: 4px; border-radius: 999px; background: rgba(var(--scrim), .6); font: 500 14px/1 var(--font); font-variant-numeric: tabular-nums;
+}
+.zoom-bar output { min-width: 3ch; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .zoom[open], .zoom-btn { animation: none; transition: none; } }
+
+/* ---------- header: room menu next to the account icon ---------- */
+.hero-actions { display: flex; align-items: center; justify-self: end; gap: 4px; }
+.menu { position: relative; }
+.menu-btn {
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%;
+  background: none; color: inherit; cursor: pointer; transition: background .2s var(--ease);
+}
+.menu-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.menu-btn:hover, .menu-btn:focus-visible, .menu-btn[aria-expanded='true'] { background: rgba(255, 255, 255, .18); outline: none; }
+.menu-btn:focus-visible { outline: 2px solid var(--on-photo); outline-offset: 2px; }
+.menu-panel {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 5; width: min(340px, calc(100vw - 24px)); padding: 8px;
+  background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 30px 60px -24px rgba(var(--scrim), .5); text-transform: none; letter-spacing: 0; text-align: left;
+  font: 400 14px/1.4 var(--font); animation: menu-in .2s var(--ease-out) both;
+}
+@keyframes menu-in { from { opacity: 0; translate: 0 -6px; } }
+.menu-panel ul { margin: 0; padding: 0; list-style: none; }
+.menu-panel .menu-item {
+  display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 12px; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-weight: 500; font-size: 15px;
+}
+.menu-item span { display: flex; flex-direction: column; }
+.menu-item small { color: var(--muted); font-size: 11px; font-weight: 400; letter-spacing: .06em; }
+.menu-icon { flex: none; width: 28px; height: 28px; color: var(--brand); }
+.menu-home { margin-bottom: 4px; border-bottom: 1px solid var(--line); border-radius: 6px 6px 0 0; }
+.menu-panel .menu-item:hover, .menu-panel .menu-item:focus-visible { background: var(--ground); outline: none; }
+.menu-panel .menu-item:focus-visible { box-shadow: inset 0 0 0 2px var(--brand); }
+.menu-panel .menu-item[aria-current='page'] { background: color-mix(in srgb, var(--brand) 9%, var(--card)); font-weight: 600; }
+@media (max-width: 560px) {
+  .menu { position: static; }
+  .menu-panel { position: fixed; top: 66px; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 80px); overflow: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .menu-panel { animation: none; } }
+.hero-bar { z-index: 3; } /* above the hero title, so the room menu is never overlapped */

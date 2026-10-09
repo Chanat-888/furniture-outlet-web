@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import type { Product } from '../data/products'
 import { CONTACT } from '../data/contact'
 import { productSpecs } from '../lib/productSpecs'
+import { ImageZoom } from './ImageZoom'
 import { RoomIcon } from './RoomIcon'
 
 const baht = (n: number) => n.toLocaleString('th-TH')
@@ -48,7 +49,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"
             strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
         </button>
-        <div className="pd-pic">{pic}</div>
+        <div className="pd-pic">{broken ? pic : <ImageZoom src={p.img} label={p.name}>{pic}</ImageZoom>}</div>
         <div className="pd-info">
           <h2 id={'pd-' + p.img} className="pd-name">{p.name}</h2>
           <dl className="pd-specs">
