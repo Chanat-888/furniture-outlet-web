@@ -75,7 +75,6 @@ export const products: Record<string, Product[]> = {
     {"name": "โซฟามินิมอล 2 ที่นั่ง MINI-BEAR-A", "sub": "โซฟา", "img": "/products/living/p043.webp", "price": 11900, "size": "170 x 90 x 80 ซม.", "color": "เทา"},
     {"name": "โซฟามินิมอล 2 ที่นั่ง MINI-BEAR-B", "sub": "โซฟา", "img": "/products/living/p044.webp", "price": 11900, "size": "170 x 90 x 80 ซม.", "color": "น้ำตาลอ่อน"},
     {"name": "โซฟา L-SHAPE NILO", "sub": "โซฟา", "img": "/products/living/p045.webp", "price": 11900, "size": "215 x 140 x 95 ซม.", "color": "น้ำตาล"},
-    {"name": "ชั้นวางรองเท้า หน้าบานพับ 4 บาน", "sub": "ตู้เก็บของ", "img": "/products/living/p065.webp", "price": 1390, "size": "120 x 32 x 90 ซม.", "color": "น้ำตาลอ่อน"},
     {"name": "ตู้ล็อคเกอร์ 3 ช่อง Kassa คาซ่า", "sub": "ตู้เก็บของ", "img": "/products/living/p075.webp", "price": 790, "was": 990, "size": "42 x 29 x 88.9 ซม.", "color": "ลายผ้า/เทาเข้ม"},
     {"name": "โต๊ะกลาง Doublin ดูบลิน", "sub": "โต๊ะกลาง", "img": "/products/living/p089.webp", "price": 1990, "size": "118 x 60 x 39 ซม.", "color": "สีไม้เวงเก้"},
     {"name": "โซฟาฟังก์ชั่น Brio ปรับนอนได้ สีเทาน้ำตาล", "sub": "โซฟา", "img": "/products/living/p107.webp", "price": 12900, "was": 29900, "size": "225 x 90-160 x 90 ซม.", "color": "เทาน้ำตาล"},
