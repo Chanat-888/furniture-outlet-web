@@ -15,7 +15,7 @@ import './CategoryPage.css'
 const LINE = CONTACT.lineHref
 const TEL = CONTACT.phoneHref
 // LINE-member promo banner (QR links to the same LINE page); slides on every room page
-const MEMBER = { img: '/products/member-line-3.webp', name: 'สมัครสมาชิกผ่าน LINE ลด 3% — แอด LINE @furnitureoutlet', href: CONTACT.lineHref }
+const MEMBER = { img: '/products/member-line-red/image.png', name: 'สมัครสมาชิก รับส่วนลด 3% — แอด LINE @furnitureoutlet', href: CONTACT.lineHref }
 const photo = (base: string, w: number) => `${base}?w=${w}&q=72&auto=format&fit=crop`
 
 export function CategoryPage() {
