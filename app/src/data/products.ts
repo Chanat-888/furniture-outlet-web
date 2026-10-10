@@ -53,7 +53,7 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้ 3 ลิ้นชัก Finn-02", "sub": "ตู้ลิ้นชัก", "img": "/products/bedroom/p137.webp", "price": 1150, "size": "59 x 40 x 75.5 ซม.", "color": "ไวท์โอ๊ค / เทา"},
     {"name": "ตู้ 4 ลิ้นชัก Finn-02", "sub": "ตู้ลิ้นชัก", "img": "/products/bedroom/p138.webp", "price": 1290, "size": "59 x 40 x 83 ซม.", "color": "ไวท์โอ๊ค / เทา"},
     {"name": "ตู้ 3 ลิ้นชัก Vin", "sub": "ตู้ลิ้นชัก", "img": "/products/bedroom/p140.webp", "price": 1150, "size": "63.5 x 35.5 x 81.5 ซม.", "color": "น้ำตาลเข้ม"},
-    {"name": "ตู้ 3 ลิ้นชัก Minimal ไม้ปาร์ติเกิลบอร์ด", "sub": "ตู้ข้างเตียง", "img": "/products/bedroom/p141.webp", "price": 1150, "size": "60 x 40 x 89 ซม.", "color": "ไวท์โอ๊ค / ขาว"},
+    {"name": "ตู้ 3 ลิ้นชัก Minimal ไม้ปาร์ติเกิลบอร์ด", "sub": "ตู้ลิ้นชัก", "img": "/products/bedroom/p141.webp", "price": 1150, "size": "60 x 40 x 89 ซม.", "color": "ไวท์โอ๊ค / ขาว"},
     {"name": "ตู้เสื้อผ้า 3 บานเปิด รุ่น Swan สีเมเปิ้ลเข้ม", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/p142.webp", "price": 3490, "size": "120 x 54 x 200 ซม.", "color": "เมเปิ้ลเข้ม"},
     {"name": "ตู้เสื้อผ้า 3 บานเปิด รุ่น Swan สีโอ๊ค", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/p143.webp", "price": 3490, "size": "120 x 54 x 200 ซม.", "color": "โอ๊คเข้ม"},
     {"name": "ชุดห้องนอน Leica (เตียง 6 ฟุต + ตู้เสื้อผ้า + โต๊ะเครื่องแป้ง)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/p149.webp", "price": 42900, "was": 49900, "size": "ตู้เสื้อผ้า 240 x 60 x 230 ซม. / โต๊ะเครื่องแป้ง 135 x 60 x 210 ซม.", "color": "ครีม"},
