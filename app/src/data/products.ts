@@ -212,6 +212,8 @@ export const products: Record<string, Product[]> = {
     {"name": "Built-in รับออกแบบสั่งทำ ห้องเสื้อผ้า", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b001.webp", "price": 0},
     {"name": "Built-in ห้องเสื้อผ้า ห้องครัว ห้องรับแขก", "sub": "ห้องครัว", "img": "/products/builtin/b002.webp", "price": 0},
     {"name": "Built-in ห้องรับแขก ตู้วางทีวี ชั้นหนังสือ", "sub": "ห้องรับแขก", "img": "/products/builtin/b003.webp", "price": 0},
+{"name": "Built-in ผนังทีวี ซี่ระแนงไม้ ไฟ LED ชั้นโชว์ข้าง", "sub": "ห้องรับแขก", "img": "/products/builtin/b004/image.jpg", "price": 0},
+{"name": "Built-in ผนังทีวี ซี่ระแนง ตู้โชว์กระจกข้าง ไฟ LED", "sub": "ห้องรับแขก", "img": "/products/builtin/b005/image.jpg", "price": 0},
   ],
 }
 
