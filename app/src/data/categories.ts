@@ -20,7 +20,7 @@ export const categories: Category[] = [
     photo: 'https://images.unsplash.com/photo-1600210491305-7396500b5b31', credit: 'Collov Home Design',
     href: link('ห้องนอน/64112a8fc6227700139b30c4'),
     icon: `<path d="M10 16v34M54 32v18"/><rect x="10" y="34" width="44" height="8"/><rect x="14" y="27" width="12" height="7" ${fill}/>` },
-  { id: 'living', label: 'ห้องนั่งเล่น', th: 'ห้องนั่งเล่น', en: 'Living Room', sub: ['โซฟา', 'ตู้เก็บของ', 'โต๊ะกลาง'],
+  { id: 'living', label: 'ห้องนั่งเล่น', th: 'ห้องนั่งเล่น', en: 'Living Room', sub: ['โซฟา', 'ตู้เก็บของ', 'ตู้รองเท้า', 'โต๊ะกลาง'],
     photo: 'https://images.unsplash.com/photo-1636206508343-a6c955887476', credit: 'nuddle',
     href: link('ห้องนั่งเล่น/64112a96c6227700139b30d2'),
     icon: `<rect x="18" y="12" width="28" height="22"/><rect x="6" y="26" width="12" height="22"/><rect x="46" y="26" width="12" height="22"/><rect x="18" y="34" width="28" height="14" ${fill}/><path d="M10 48v6M54 48v6"/>` },
