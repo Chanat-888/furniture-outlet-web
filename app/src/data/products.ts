@@ -98,7 +98,6 @@ export const products: Record<string, Product[]> = {
     {"name": "โซฟามินิมอล 2 ที่นั่ง MINI-BEAR-A", "sub": "โซฟา", "img": "/products/living/p043.webp", "price": 11900, "size": "170 x 90 x 80 ซม.", "color": "เทา"},
     {"name": "โซฟามินิมอล 2 ที่นั่ง MINI-BEAR-B", "sub": "โซฟา", "img": "/products/living/p044.webp", "price": 11900, "size": "170 x 90 x 80 ซม.", "color": "น้ำตาลอ่อน"},
     {"name": "โซฟา L-SHAPE NILO", "sub": "โซฟา", "img": "/products/living/p045.webp", "price": 11900, "size": "215 x 140 x 95 ซม.", "color": "น้ำตาล"},
-    {"name": "ชั้นวางของ 1.20 เมตร HomeDecor CB-125", "sub": "ตู้เก็บของ", "img": "/products/living/p064.webp", "price": 2590, "size": "120 x 30 x 170 ซม.", "color": "โอ๊คสลับเทา/ดำ"},
     {"name": "ชั้นวางรองเท้า หน้าบานพับ 4 บาน", "sub": "ตู้เก็บของ", "img": "/products/living/p065.webp", "price": 1390, "size": "120 x 32 x 90 ซม.", "color": "น้ำตาลอ่อน"},
     {"name": "ตู้ล็อคเกอร์ 4 ช่อง Color Box คาซ่า", "sub": "ตู้เก็บของ", "img": "/products/living/p073.webp", "price": 890, "size": "42 x 29 x 118 ซม.", "color": "ลายไม้/น้ำตาลอ่อน"},
     {"name": "ตู้ล็อคเกอร์ 4 ช่อง Kassa คาซ่า", "sub": "ตู้เก็บของ", "img": "/products/living/p074.webp", "price": 890, "size": "42 x 29 x 118 ซม.", "color": "ลายผ้า/เทาเข้ม"},
