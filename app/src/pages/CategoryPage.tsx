@@ -42,7 +42,6 @@ export function CategoryPage() {
   const shown = active ? items.filter((p) => p.sub === active.label) : items
 
   useEffect(() => { setFilter(null) }, [id])
-  useEffect(() => { if (c) document.title = `${c.th} — Furniture Outlet` }, [c])
 
   // hide the scroll cue once the visitor starts scrolling
   useEffect(() => {

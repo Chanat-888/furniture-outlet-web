@@ -4,10 +4,11 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider, ScrollRestoratio
 import './index.css'
 import { HomePage } from './pages/HomePage'
 import { CategoryPage } from './pages/CategoryPage'
+import { Seo } from './components/Seo'
 
 const router = createBrowserRouter([
   {
-    element: <><Outlet /><ScrollRestoration /></>,
+    element: <><Seo /><Outlet /><ScrollRestoration /></>,
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/category/:id', element: <CategoryPage /> },

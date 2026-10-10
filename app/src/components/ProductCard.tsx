@@ -22,7 +22,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
   }
   const pic = broken
     ? <RoomIcon icon={icon} className="card-fallback" />
-    : <img src={p.img} alt="" width="600" height="600" loading="lazy" decoding="async" onError={() => setBroken(true)} />
+    : <img src={p.img} alt={p.name} width="600" height="600" loading="lazy" decoding="async" onError={() => setBroken(true)} />
 
   return (
     <article className="card">
