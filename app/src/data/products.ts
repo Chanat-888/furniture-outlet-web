@@ -80,7 +80,6 @@ export const products: Record<string, Product[]> = {
     {"name": "โซฟาฟังก์ชั่น Brio ปรับนอนได้ สีเทาน้ำตาล", "sub": "โซฟา", "img": "/products/living/p107.webp", "price": 12900, "was": 29900, "size": "225 x 90-160 x 90 ซม.", "color": "เทาน้ำตาล"},
     {"name": "โซฟาฟังก์ชั่น Brio ปรับนอนได้ สีเทาเข้ม", "sub": "โซฟา", "img": "/products/living/p108.webp", "price": 12900, "was": 29900, "size": "225 x 90-160 x 90 ซม.", "color": "เทาเข้ม"},
     {"name": "โซฟาฟังก์ชั่น Alice Plus", "sub": "โซฟา", "img": "/products/living/p110.webp", "price": 15900, "was": 19900, "size": "255 x 165 x 85 ซม.", "color": "น้ำตาลเข้ม"},
-    {"name": "ผ้าหุ้มโซฟาตามความต้องการ (Custom)", "sub": "โซฟา", "img": "/products/living/p111.webp", "price": 0},
     {"name": "เก้าอี้พักผ่อน รุ่น 5817 ปรับระดับไฟฟ้า", "sub": "โซฟา", "img": "/products/living/p116.webp", "price": 7990, "was": 10900, "size": "80 x 70 x 100 ซม.", "color": "เทา"},
     {"name": "โซฟา 3 ที่นั่ง Navada (เบาะ Pocket Spring)", "sub": "โซฟา", "img": "/products/living/p144.webp", "price": 28900, "was": 33900, "size": "265 x 175 x 115 ซม.", "color": "เทา"},
     {"name": "โซฟา 4 ที่นั่ง Comford-L", "sub": "โซฟา", "img": "/products/living/p146.webp", "price": 24900, "size": "300 x 170 x 110 ซม.", "color": "เทาเข้ม"},
