@@ -175,9 +175,6 @@ export const products: Record<string, Product[]> = {
     {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง 8832+227 หน้าท็อปหินอ่อนลาย Nero Marquina", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p083.webp", "price": 32900, "was": 39900, "color": "ดำ (หินอ่อนลายเนโร มาร์กีน่า)"},
     {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง A727 (สาขาเขาใหญ่เท่านั้น)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p085.webp", "price": 39900, "size": "โต๊ะ 200 x 100 x 75 / เก้าอี้ 49 x 50 x 100 ซม.", "color": "หินดาร์ก เอ็มเพอเรอร์/โรสโกลด์"},
     {"name": "ชุดโต๊ะอาหาร Steve สตีฟ", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p086.webp", "price": 15900, "was": 29900, "size": "180 x 90 x 76 ซม.", "color": "ไม้ Pecan Oak"},
-    {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง เก้าอี้หุ้มหนังสีดำ", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/n037.webp", "price": 0, "color": "ดำ"},
-    {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง เก้าอี้หุ้มหนังสีน้ำตาล", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/n038.webp", "price": 0, "color": "น้ำตาล"},
-    {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง โต๊ะหน้าหินขาว เก้าอี้สีครีม", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/n039.webp", "price": 0, "color": "ขาว"},
     {"name": "ชุดโต๊ะอาหาร 4 ที่นั่ง โต๊ะหน้าหินขาว เก้าอี้สีครีม", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/n040.webp", "price": 0, "color": "ขาว"},
   ],
   storage: [
