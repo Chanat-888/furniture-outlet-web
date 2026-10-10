@@ -75,7 +75,6 @@ export const products: Record<string, Product[]> = {
     {"name": "เตียงพร้อมที่นอน หัวเตียงหนังหัวเข็มขัด สีครีม", "sub": "เตียง", "img": "/products/bedroom/n012.webp", "price": 0, "color": "ครีม"},
     {"name": "ตู้เสื้อผ้าบานเลื่อน KEPT สี NT Oak / เทา", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/n013.webp", "price": 0, "size": "ก 160 x ล 55 x ส 200 ซม.", "color": "สีโอ๊ค/เทา"},
     {"name": "ตู้เสื้อผ้า 6 บานเปิด 1 ลิ้นชัก Julian สีวอลนัท", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/n014.webp", "price": 0, "size": "ก 180 x ล 45 x ส 184 ซม.", "color": "วอลนัท"},
-    {"name": "ชุดห้องนอน เตียงลิ้นชัก ตู้เสื้อผ้า โต๊ะเครื่องแป้ง สีโอ๊ค-ขาว", "sub": "ชุดห้องนอน", "img": "/products/bedroom/n026.webp", "price": 0, "color": "สีโอ๊ค"},
     {"name": "เตียงพร้อมที่นอน Gold Dollar หัวเตียงลายตั้ง สีเทา", "sub": "เตียง", "img": "/products/bedroom/n036.webp", "price": 0, "color": "เทา"},
     {"name": "ตู้เสื้อผ้าเหล็กบานเลื่อน รุ่น SDS-160 สีขาว", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/w01.webp", "price": 0, "size": "160 x 56 x 180 ซม.", "color": "ขาว"},
     {"name": "ตู้เสื้อผ้าเหล็ก 2 บานเปิด รุ่น WD-02-02 สีขาว บานกระจก", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/w02.webp", "price": 0, "size": "120 x 58.5 x 200 ซม.", "color": "ขาว"},
