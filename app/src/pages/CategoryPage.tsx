@@ -126,7 +126,7 @@ export function CategoryPage() {
           <section className="shelf shelf-works" aria-labelledby="shelf-title">
             <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
             <div className="grid" ref={gridRef}>
-              {works.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
+              {works.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} category={c.th} />)}
             </div>
           </section>
         </>
@@ -161,7 +161,7 @@ export function CategoryPage() {
           {items.length > 0 ? (
             <>
               <div className="grid" ref={gridRef}>
-                {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} />)}
+                {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} category={c.th} />)}
               </div>
               <a className="shelf-more" href={c.href} target="_blank" rel="noopener">
                 ดู{c.th}ทั้งหมดที่ furniture-outletshop.com <Arrow dir="out" />

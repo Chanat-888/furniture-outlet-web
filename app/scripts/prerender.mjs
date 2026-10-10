@@ -130,9 +130,13 @@ for (const c of categories) {
 
 const day = new Date().toISOString().slice(0, 10)
 const urls = ['/', ...categories.map((c) => `/category/${c.id}`)]
+// category entries carry <image:image> for each product picture (Google Images discovery)
+const imageTags = (id) =>
+  (products[id] ?? []).map((p) => `\n    <image:image><image:loc>${esc(abs(p.img))}</image:loc><image:title>${esc(p.name)}</image:title></image:image>`).join('')
+const entry = (u) => `  <url><loc>${abs(u)}</loc><lastmod>${day}</lastmod>${u.startsWith('/category/') ? imageTags(u.split('/')[2]) : ''}</url>`
 writeFileSync(
   'dist/sitemap.xml',
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${abs(u)}</loc><lastmod>${day}</lastmod></url>`).join('\n')}\n</urlset>\n`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map(entry).join('\n')}\n</urlset>\n`,
 )
 writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nDisallow: /signup\nDisallow: /profile\n\nSitemap: ${abs('/sitemap.xml')}\n`)
 

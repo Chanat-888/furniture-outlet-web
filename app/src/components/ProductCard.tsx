@@ -7,7 +7,7 @@ import { RoomIcon } from './RoomIcon'
 
 const baht = (n: number) => n.toLocaleString('th-TH')
 
-export function ProductCard({ p, icon }: { p: Product; icon: string }) {
+export function ProductCard({ p, icon, category }: { p: Product; icon: string; category: string }) {
   const [broken, setBroken] = useState(false)
   const [copied, setCopied] = useState(false)
   const dialog = useRef<HTMLDialogElement>(null)
@@ -22,7 +22,7 @@ export function ProductCard({ p, icon }: { p: Product; icon: string }) {
   }
   const pic = broken
     ? <RoomIcon icon={icon} className="card-fallback" />
-    : <img src={p.img} alt={p.name} width="600" height="600" loading="lazy" decoding="async" onError={() => setBroken(true)} />
+    : <img src={p.img} alt={`${p.name} - ${category}`} width="600" height="600" loading="lazy" decoding="async" onError={() => setBroken(true)} />
 
   return (
     <article className="card">
