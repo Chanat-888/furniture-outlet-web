@@ -68,7 +68,7 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้เสื้อผ้าเหล็กบานเลื่อน รุ่น WDX-05-2 สีฟ้า บานกระจก", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/w03.webp", "price": 0, "size": "120 x 56 x 200 ซม.", "color": "ฟ้า"},
   ],
   living: [
-    {"name": "โซฟา Marbel", "sub": "โซฟา", "img": "/products/living/p002.webp", "price": 28500, "size": "300 x 170 x 110 ซม.", "color": "น้ำตาล"},
+    {"name": "โซฟา Marbel", "sub": "โซฟา", "img": "/products/living/p002.webp", "price": 29500, "size": "300 x 170 x 110 ซม.", "color": "น้ำตาล"},
     {"name": "โซฟา 3 ที่นั่ง Catherine", "sub": "โซฟา", "img": "/products/living/p003.webp", "price": 28500, "was": 35900, "size": "250 x 90-170-207 x 100 ซม.", "color": "ฟ้า"},
     {"name": "โซฟา U-Shape Siena", "sub": "โซฟา", "img": "/products/living/p014.webp", "price": 35900, "was": 45900, "size": "332 x 133-200 x 66 ซม.", "color": "ครีม"},
     {"name": "โซฟาเบดระบบไฟฟ้า D26", "sub": "โซฟา", "img": "/products/living/p015.webp", "price": 29900, "was": 45900, "size": "180 x 130-220 x 100 ซม.", "color": "เทาน้ำตาล"},
