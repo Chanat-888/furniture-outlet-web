@@ -1,6 +1,6 @@
 export const CONTACT = {
-  phoneLabel: '039-303-304',
-  phoneHref: 'tel:039303304',
+  phoneLabel: '087-618-7486',
+  phoneHref: 'tel:0876187486',
   lineId: '@furnitureoutlet',
   lineHref: 'https://line.me/R/ti/p/@furnitureoutlet',
   facebook: 'https://www.facebook.com/furnituresoutlet',
