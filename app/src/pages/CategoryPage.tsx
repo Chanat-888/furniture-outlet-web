@@ -37,7 +37,6 @@ export function CategoryPage() {
     () => (c?.sub ?? []).map((label) => ({ label, n: items.filter((p) => p.sub === label).length })),
     [items, c],
   )
-  const revealed = useRef(new Set<string>())
   const active = chips.find((f) => f.label === filter && f.n > 0)
   const shown = active ? items.filter((p) => p.sub === active.label) : items
 
@@ -59,15 +58,15 @@ export function CategoryPage() {
   useEffect(() => {
     const grid = gridRef.current
     if (!grid || matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    // only cards not yet seen; stagger follows the real column count
+    // only cards not yet shown (cards kept across a filter change keep their 'in' class); stagger follows the real column count
     const cols = getComputedStyle(grid).gridTemplateColumns.split(' ').length
-    const cards = [...grid.querySelectorAll<HTMLAnchorElement>('.card')].filter((el) => !revealed.current.has(el.href))
+    const cards = [...grid.querySelectorAll<HTMLElement>('.card:not(.in)')]
     cards.forEach((el) => el.classList.add('pending'))
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (!e.isIntersecting) return
-      const el = e.target as HTMLAnchorElement
+      const el = e.target as HTMLElement
       el.style.setProperty('--i', String([...grid.children].indexOf(el) % cols))
-      el.classList.replace('pending', 'in'); revealed.current.add(el.href); io.unobserve(el)
+      el.classList.replace('pending', 'in'); io.unobserve(el)
     }), { rootMargin: '0px 0px -8% 0px' })
     cards.forEach((el) => io.observe(el))
     return () => io.disconnect()
