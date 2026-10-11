@@ -4,6 +4,7 @@ export type Product = {
   name: string
   sub: string // sub-category label, matches Category.sub
   img: string // local image path
+  more?: string[] // extra photos of the same job, shown as a thumbnail strip in the pop-up; every photo (img too) needs a 160px square thumbnail beside it named *.t.webp
   price: number
   was?: number // original price when on promotion
   size?: string
@@ -645,10 +646,9 @@ export const products: Record<string, Product[]> = {
     {"name": "Built-in ห้องรับแขก ตู้วางทีวี ชั้นหนังสือ", "sub": "ห้องรับแขก", "img": "/products/builtin/b003.webp", "price": 0},
 {"name": "Built-in ผนังทีวี ซี่ระแนงไม้ ไฟ LED ชั้นโชว์ข้าง", "sub": "ห้องรับแขก", "img": "/products/builtin/b004/image.jpg", "price": 0},
 {"name": "Built-in ผนังทีวี ซี่ระแนง ตู้โชว์กระจกข้าง ไฟ LED", "sub": "ห้องรับแขก", "img": "/products/builtin/b005/image.jpg", "price": 0},
-{"name": "Built-in ห้องประชุม ผนังบุ ฝ้าเพดานไฟ LED โต๊ะประชุมยาว", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b006/image.png", "price": 0},
+{"name": "ห้องประชุม Leelavadee ร.พ.พระปกเกล้า", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b006/01.webp", "more": ["/products/builtin/b006/02.webp", "/products/builtin/b006/03.webp", "/products/builtin/b006/04.webp", "/products/builtin/b006/05.webp", "/products/builtin/b006/06.webp", "/products/builtin/b006/07.webp", "/products/builtin/b006/08.webp", "/products/builtin/b006/09.webp", "/products/builtin/b006/10.webp"], "price": 0},
+{"name": "ห้องประชุมตึกอายุรกรรม ชั้น 5 ร.พ.พระปกเกล้า", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b010/01.webp", "more": ["/products/builtin/b010/02.webp", "/products/builtin/b010/03.webp", "/products/builtin/b010/04.webp", "/products/builtin/b010/05.webp", "/products/builtin/b010/06.webp", "/products/builtin/b010/07.webp", "/products/builtin/b010/08.webp", "/products/builtin/b010/09.webp", "/products/builtin/b010/10.webp"], "price": 0},
 {"name": "Built-in ห้องเสื้อผ้า ชั้นโล่ง ไฟ LED ลิ้นชักสีส้ม", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b007/image.jpg", "price": 0},
-{"name": "Built-in สำนักงาน ผนังบุ ฝ้าเพดานโค้งไฟ LED", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b008/image.jpg", "price": 0},
-{"name": "Built-in สำนักงาน ผนังบุ เสาหุ้ม ห้องโล่งวิวกระจก", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b009/image.png", "price": 0},
   ],
 }
 
