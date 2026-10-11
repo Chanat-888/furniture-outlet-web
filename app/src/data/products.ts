@@ -928,6 +928,7 @@ export const products: Record<string, Product[]> = {
 {"name": "Built-in คลินิก เคาน์เตอร์ลงทะเบียน ชำระเงิน รับยา ตู้ยา", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b014/image.jpg", "price": 0},
 {"name": "Built-in คลินิก ห้องตรวจ โต๊ะแพทย์ เตียงตรวจ", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b015/image.jpg", "price": 0},
 {"name": "Built-in คลินิก ตู้เก็บเวชภัณฑ์ รถเข็นยา", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b016/image.jpg", "price": 0},
+{"name": "Built-in ห้องพักผู้ป่วยพิเศษ ตู้ เคาน์เตอร์ มุมทานอาหาร", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b021/01.webp", "more": ["/products/builtin/b021/02.webp", "/products/builtin/b021/03.webp", "/products/builtin/b021/04.webp", "/products/builtin/b021/05.webp", "/products/builtin/b021/06.webp", "/products/builtin/b021/07.webp", "/products/builtin/b021/08.webp"], "price": 0},
   ],
 }
 
