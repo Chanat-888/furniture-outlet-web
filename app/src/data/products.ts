@@ -918,6 +918,7 @@ export const products: Record<string, Product[]> = {
 {"name": "ห้องประชุมตึกอายุรกรรม ชั้น 5 ร.พ.พระปกเกล้า", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b010/01.webp", "more": ["/products/builtin/b010/02.webp", "/products/builtin/b010/03.webp", "/products/builtin/b010/04.webp", "/products/builtin/b010/05.webp", "/products/builtin/b010/06.webp", "/products/builtin/b010/07.webp", "/products/builtin/b010/08.webp", "/products/builtin/b010/09.webp", "/products/builtin/b010/10.webp"], "price": 0},
 {"name": "ผนังประดิษฐานพระบรมฉายาลักษณ์ ซี่ระแนงไม้ ซ่อนไฟ", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b017/01.webp", "more": ["/products/builtin/b017/02.webp"], "price": 0},
 {"name": "Co-working space มหาวิทยาลัยรำไพพรรณี จันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b018/01.webp", "price": 0},
+{"name": "Shop ขายของ วังสวนบ้านแก้ว ม.รำไพพรรณี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b019/01.webp", "more": ["/products/builtin/b019/02.webp", "/products/builtin/b019/03.webp"], "price": 0},
 {"name": "Built-in ห้องเสื้อผ้า ชั้นโล่ง ไฟ LED ลิ้นชักสีส้ม", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b007/image.jpg", "price": 0},
 {"name": "Built-in คลินิก พื้นที่รอตรวจ เคาน์เตอร์ลงทะเบียน", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b010/image.jpg", "price": 0},
 {"name": "Built-in คลินิก ห้องทำหัตถการ", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b011/image.jpg", "price": 0},
