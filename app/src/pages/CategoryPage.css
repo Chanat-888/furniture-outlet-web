@@ -146,7 +146,7 @@
 @keyframes pd-in { from { opacity: 0; translate: 0 16px; scale: .98; } }
 @keyframes pd-fade { from { opacity: 0; } }
 .pd-pic { display: grid; place-items: center; aspect-ratio: 1; background: #fff; border-right: 1px solid var(--line); }
-.pd-pic img { width: 100%; height: 100%; object-fit: contain; padding: 6%; box-sizing: border-box; }
+.pd-pic img { width: 100%; height: 100%; max-width: var(--cap-w, none); max-height: var(--cap-h, none); object-fit: contain; padding: 6%; box-sizing: border-box; }
 .pd-pic .card-fallback { width: 30%; }
 .pd-info { display: flex; flex-direction: column; gap: 24px; padding: 40px 32px 32px; min-width: 0; }
 .pd-name { margin: 0; font: 600 var(--fs-h2)/1.25 var(--font); text-wrap: balance; }
@@ -310,7 +310,7 @@
 .zoom::backdrop { background: none; }
 .zoom-view { position: absolute; inset: 60px 0 80px; display: flex; overflow: auto; scrollbar-width: thin; overscroll-behavior: contain; }
 .zoom-view:focus-visible { outline: 2px solid var(--on-photo); outline-offset: -4px; }
-.zoom-view img { margin: auto; width: 100%; height: 100%; object-fit: contain; cursor: zoom-in; user-select: none; }
+.zoom-view img { margin: auto; width: 100%; height: 100%; max-width: var(--cap-w, none); max-height: var(--cap-h, none); object-fit: contain; cursor: zoom-in; user-select: none; }
 .zoom-view.zoomed img { flex: none; max-width: none; max-height: none; cursor: grab; }
 .zoom-btn {
   display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255, 255, 255, .35);
