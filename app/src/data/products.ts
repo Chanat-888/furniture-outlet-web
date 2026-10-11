@@ -908,6 +908,15 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้วางทีวี ขนาด 1.50 เมตร CARGO CG-154 (เทาเข้ม)", "sub": "ชุดวางทีวี", "img": "/products/storage/c015.webp", "price": 0, "size": "150 x 45 x 67.5 ซม.", "color": "เทาเข้ม"},
     {"name": "ตู้วางทีวี ขนาด 1.50 เมตร CARGO CG-154 (ขาว)", "sub": "ชุดวางทีวี", "img": "/products/storage/c016.webp", "price": 0, "size": "150 x 45 x 67.5 ซม.", "color": "ขาว"},
   ],
+  outdoor: [
+    {"name": "ชุดสนาม COTY 2 ที่นั่ง สีดำ", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o001.webp", "price": 0, "size": "โต๊ะ 60 x 60 x 70 ซม. เก้าอี้ 54 x 56 x 73 ซม.", "color": "ดำ"},
+    {"name": "ชุดสนาม OUTDOOR โต๊ะกลม 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o002.webp", "price": 0, "size": "โต๊ะกลม เส้นผ่านศูนย์กลาง 80 x สูง 70 ซม.", "color": "ครีม, ไม้"},
+    {"name": "ชุดสนาม TAMPA 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o003.webp", "price": 0, "size": "โต๊ะ 60 x 60 x 71 ซม. เก้าอี้ 56 x 54 x 77 ซม.", "color": "ดำ"},
+    {"name": "ชุดสนาม MIAMI 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o004.webp", "price": 0, "size": "โต๊ะ 70 x 70 x 70 ซม. เก้าอี้ 54 x 57 x 72 ซม.", "color": "ดำ"},
+    {"name": "ชุดสนาม COTY 2 ที่นั่ง สีม่วง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o005.webp", "price": 0, "size": "โต๊ะ 60 x 60 x 70 ซม. เก้าอี้ 54 x 56 x 73 ซม."},
+    {"name": "ชุดสนาม OUTDOOR โต๊ะเหลี่ยม 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o006.webp", "price": 0, "size": "โต๊ะ 80 x 80 x 74 ซม.", "color": "ขาว, ไม้"},
+    {"name": "ชุดสนาม OUTDOOR โต๊ะเหลี่ยม 2 ที่นั่ง โต๊ะท็อปกระจก พับเก็บได้", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o007.webp", "price": 0, "size": "โต๊ะ 70 x 30 x 70 ซม. เก้าอี้ 65 x 55 x 90 ซม.", "color": "น้ำตาลเข้ม"},
+  ],
   builtin: [
     {"name": "Built-in รับออกแบบสั่งทำ ห้องเสื้อผ้า", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b001.webp", "price": 0},
     {"name": "Built-in ห้องเสื้อผ้า ห้องครัว ห้องรับแขก", "sub": "ห้องครัว", "img": "/products/builtin/b002.webp", "price": 0},
