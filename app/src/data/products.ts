@@ -931,6 +931,8 @@ export const products: Record<string, Product[]> = {
 {"name": "ห้องพักผู้ป่วยพิเศษ โรงพยาบาลสิริเวช จันทบุรี", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b021/01.webp", "more": ["/products/builtin/b021/02.webp", "/products/builtin/b021/03.webp", "/products/builtin/b021/04.webp", "/products/builtin/b021/05.webp", "/products/builtin/b021/06.webp", "/products/builtin/b021/07.webp", "/products/builtin/b021/08.webp", "/products/builtin/b021/09.webp", "/products/builtin/b021/10.webp", "/products/builtin/b021/11.webp"], "price": 0},
 {"name": "ตู้เก็บเอกสาร อบจ.จันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b022/01.webp", "more": ["/products/builtin/b022/02.webp", "/products/builtin/b022/03.webp"], "price": 0},
 {"name": "วอร์ดผู้ป่วยใน โรงพยาบาลสิริเวช จันทบุรี", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b023/01.webp", "more": ["/products/builtin/b023/02.webp", "/products/builtin/b023/03.webp", "/products/builtin/b023/04.webp", "/products/builtin/b023/05.webp", "/products/builtin/b023/06.webp"], "price": 0},
+{"name": "ห้องประชุมชั้น 8 อาคาร 36 มหาวิทยาลัยรำไพพรรณี จันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b024/01.webp", "more": ["/products/builtin/b024/02.webp", "/products/builtin/b024/03.webp", "/products/builtin/b024/04.webp", "/products/builtin/b024/05.webp", "/products/builtin/b024/06.webp"], "price": 0},
+{"name": "ห้องประชุมฟาร์ม CP นายายอาม", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b025/01.webp", "more": ["/products/builtin/b025/02.webp", "/products/builtin/b025/03.webp", "/products/builtin/b025/04.webp", "/products/builtin/b025/05.webp", "/products/builtin/b025/06.webp"], "price": 0},
   ],
 }
 
