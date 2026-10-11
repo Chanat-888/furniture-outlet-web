@@ -24,7 +24,7 @@ export const categories: Category[] = [
     photo: 'https://images.unsplash.com/photo-1636206508343-a6c955887476', credit: 'nuddle',
     href: link('ห้องนั่งเล่น/64112a96c6227700139b30d2'),
     icon: `<rect x="18" y="12" width="28" height="22"/><rect x="6" y="26" width="12" height="22"/><rect x="46" y="26" width="12" height="22"/><rect x="18" y="34" width="28" height="14" ${fill}/><path d="M10 48v6M54 48v6"/>` },
-  { id: 'office', label: 'ชุดสำนักงาน', th: 'ชุดสำนักงาน', en: 'Office Furniture', sub: ['เก้าอี้เกมมิ่ง', 'โต๊ะทำงาน', 'ตู้เซฟ', 'ตู้เก็บของสำนักงาน', 'ตู้เอกสารเหล็ก', 'ชุดโต๊ะทำงาน', 'โต๊ะประชุม', 'เคาน์เตอร์ต้อนรับ', 'พาร์ทิชั่นสำนักงาน', 'เก้าอี้สำนักงาน', 'เก้าอี้พักคอย'],
+  { id: 'office', label: 'ชุดสำนักงาน', th: 'ชุดสำนักงาน', en: 'Office Furniture', sub: ['เก้าอี้เกมมิ่ง', 'โต๊ะทำงาน', 'ตู้เซฟ', 'ตู้เก็บของสำนักงาน', 'ตู้เอกสารเหล็ก', 'ชุดโต๊ะทำงาน', 'โต๊ะประชุม', 'เคาน์เตอร์ต้อนรับ', 'พาร์ทิชั่นสำนักงาน', 'เก้าอี้สำนักงาน'],
     photo: 'https://images.unsplash.com/photo-1596022326953-84f20bfebb77', credit: 'Sven Brandsma',
     href: link('ห้องทำงาน/64112a9c6202f50013e07db0'),
     icon: `<rect x="12" y="8" width="22" height="13"/><rect x="16" y="12" width="14" height="5" ${fill}/><path d="M23 21v4M6 26h52M10 26v28M54 26v28"/><rect x="40" y="26" width="14" height="18"/><path d="M44 35h6"/>` },
