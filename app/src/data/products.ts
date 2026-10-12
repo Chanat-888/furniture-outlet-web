@@ -961,6 +961,7 @@ export const products: Record<string, Product[]> = {
 {"name": "ห้องประชุม บมจ. เจริญโภคภัณฑ์อาหาร ฟาร์มจันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b040/01.webp", "more": ["/products/builtin/b040/02.webp", "/products/builtin/b040/03.webp"], "price": 0},
 {"name": "การไฟฟ้าส่วนภูมิภาค สาขานายายอาม", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b041/01.webp", "more": ["/products/builtin/b041/02.webp", "/products/builtin/b041/03.webp"], "price": 0},
 {"name": "การไฟฟ้าส่วนภูมิภาค สาขาย่อย เขาคิชฌกูฏ", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b042/01.webp", "more": ["/products/builtin/b042/02.webp"], "price": 0},
+{"name": "Co-Working Space ตึกมะเร็ง ร.พ.พระปกเกล้า", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b043/01.webp", "more": ["/products/builtin/b043/02.webp", "/products/builtin/b043/03.webp", "/products/builtin/b043/04.webp", "/products/builtin/b043/05.webp", "/products/builtin/b043/06.webp"], "price": 0},
   ],
 }
 
