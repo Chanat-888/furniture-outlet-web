@@ -957,6 +957,7 @@ export const products: Record<string, Product[]> = {
 {"name": "Zipunto Cafe จันทบุรี", "sub": "ห้องครัว", "img": "/products/builtin/b037/01.webp", "more": ["/products/builtin/b037/02.webp", "/products/builtin/b037/03.webp", "/products/builtin/b037/04.webp"], "price": 0},
 {"name": "ตัวอย่างบ้านลูกค้า ห้องนอนและห้องครัว Built-in โทนสีขาว", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b038/01.webp", "more": ["/products/builtin/b038/02.webp", "/products/builtin/b038/03.webp", "/products/builtin/b038/04.webp", "/products/builtin/b038/05.webp", "/products/builtin/b038/06.webp", "/products/builtin/b038/07.webp"], "price": 0},
 {"name": "ICU ร.พ.สิริเวช", "sub": "คลินิก/โรงพยาบาล", "img": "/products/builtin/b039/01.webp", "more": ["/products/builtin/b039/02.webp", "/products/builtin/b039/03.webp", "/products/builtin/b039/04.webp"], "price": 0},
+{"name": "ห้องประชุม บมจ. เจริญโภคภัณฑ์อาหาร ฟาร์มจันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b040/01.webp", "more": ["/products/builtin/b040/02.webp", "/products/builtin/b040/03.webp"], "price": 0},
   ],
 }
 
