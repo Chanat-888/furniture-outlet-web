@@ -948,6 +948,7 @@ export const products: Record<string, Product[]> = {
 {"name": "ห้องประชุมชั้น 8 อาคาร 36 มหาวิทยาลัยรำไพพรรณี จันทบุรี", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b026/01.webp", "more": ["/products/builtin/b026/02.webp", "/products/builtin/b026/03.webp", "/products/builtin/b026/04.webp", "/products/builtin/b026/05.webp", "/products/builtin/b026/06.webp"], "price": 0},
 {"name": "ห้องประชุมฟาร์ม CP นายายอาม", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b027/01.webp", "more": ["/products/builtin/b027/02.webp", "/products/builtin/b027/03.webp", "/products/builtin/b027/04.webp", "/products/builtin/b027/05.webp", "/products/builtin/b027/06.webp"], "price": 0},
 {"name": "ตัวอย่างบ้านลูกค้า ห้องนอนและห้องแต่งตัว Built-in", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b028/01.webp", "more": ["/products/builtin/b028/02.webp", "/products/builtin/b028/03.webp", "/products/builtin/b028/04.webp", "/products/builtin/b028/05.webp", "/products/builtin/b028/06.webp", "/products/builtin/b028/07.webp", "/products/builtin/b028/08.webp", "/products/builtin/b028/09.webp", "/products/builtin/b028/10.webp"], "price": 0},
+{"name": "Co-working Space ร.พ.พระปกเกล้า", "sub": "ห้องประชุม/สำนักงาน", "img": "/products/builtin/b031/01.webp", "more": ["/products/builtin/b031/02.webp", "/products/builtin/b031/03.webp", "/products/builtin/b031/04.webp", "/products/builtin/b031/05.webp", "/products/builtin/b031/06.webp", "/products/builtin/b031/07.webp", "/products/builtin/b031/08.webp", "/products/builtin/b031/09.webp"], "price": 0},
   ],
 }
 
