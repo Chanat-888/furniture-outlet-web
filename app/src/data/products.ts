@@ -927,6 +927,9 @@ export const products: Record<string, Product[]> = {
     {"name": "ชุดสนาม COTY 2 ที่นั่ง สีม่วง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o005.webp", "price": 0, "size": "โต๊ะ 60 x 60 x 70 ซม. เก้าอี้ 54 x 56 x 73 ซม."},
     {"name": "ชุดสนาม OUTDOOR โต๊ะเหลี่ยม 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o006.webp", "price": 0, "size": "โต๊ะ 80 x 80 x 74 ซม.", "color": "ขาว, ไม้"},
     {"name": "ชุดสนาม OUTDOOR โต๊ะเหลี่ยม 2 ที่นั่ง โต๊ะท็อปกระจก พับเก็บได้", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o007.webp", "price": 0, "size": "โต๊ะ 70 x 30 x 70 ซม. เก้าอี้ 65 x 55 x 90 ซม.", "color": "น้ำตาลเข้ม"},
+    {"name": "4 ที่นั่งพลาสติก PP", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o008.webp", "price": 6900, "was": 9900},
+    {"name": "ชุดสนามอัลลอย 2 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o009.webp", "price": 0},
+    {"name": "ชุดสนาม 4 ที่นั่ง", "sub": "เฟอร์นิเจอร์นอกบ้าน", "img": "/products/outdoor/o010.webp", "price": 0},
   ],
   builtin: [
     {"name": "Built-in รับออกแบบสั่งทำ ห้องเสื้อผ้า", "sub": "ห้องเสื้อผ้า", "img": "/products/builtin/b001.webp", "price": 0},
