@@ -168,6 +168,7 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้เสื้อผ้าเหล็ก 2 บานเปิด ชนิดบานทึบ CARGO CG-961W (ขาว)", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/c002.webp", "price": 0, "size": "90 x 60 x 195 ซม.", "color": "ขาว"},
     {"name": "ตู้เสื้อผ้าเหล็ก 2 บานเปิด ชนิดบานเปิดกระจกบน CARGO CG-962W (เทาเข้ม)", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/c003.webp", "price": 0, "size": "90 x 60 x 195 ซม.", "color": "เทาเข้ม"},
     {"name": "ตู้เสื้อผ้าเหล็ก 2 บานเปิด ชนิดบานเปิดกระจกบน CARGO CG-962W (ขาว)", "sub": "ตู้เสื้อผ้าเหล็ก", "img": "/products/bedroom/c004.webp", "price": 0, "size": "90 x 60 x 195 ซม.", "color": "ขาว"},
+    {"name": "ชุดห้องนอน 3 บานสไลด์ สีเทาเข้ม", "sub": "ชุดห้องนอน", "img": "/products/bedroom/s001.webp", "price": 0, "size": "ตู้เสื้อผ้า 240 x 60 x 220 ซม. / โต๊ะเครื่องแป้ง 115 x 40 x 180 ซม.", "color": "เทาเข้ม"},
   ],
   living: [
     {"name": "โซฟา Marbel", "sub": "โซฟา", "img": "/products/living/p002b/image.png", "price": 29500, "size": "300 x 170 x 110 ซม.", "color": "น้ำตาล"},
