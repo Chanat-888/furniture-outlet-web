@@ -18,17 +18,22 @@ export function BannerSlider({ slides, label }: { slides: Slide[]; label: string
     el.scrollTo({ left: to * el.clientWidth, behavior: reduce() ? 'auto' : 'smooth' })
   }
 
-  // gentle autoplay; stops on hover, focus or touch, and never runs with reduced motion
+  // autoplay runs all the time; it only waits while a mouse hovers or a finger is on the slider,
+  // and picks up again a few seconds after the finger lifts. Reduced motion just jumps instead of gliding.
+  const resume = useRef<ReturnType<typeof setTimeout>>(undefined)
   useEffect(() => {
-    if (paused || slides.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (paused || slides.length < 2) return
     const t = setInterval(() => go(i + 1), AUTOPLAY_MS)
     return () => clearInterval(t)
   })
+  useEffect(() => () => clearTimeout(resume.current), [])
 
   return (
     <div className="slider" role="region" aria-roledescription="carousel" aria-label={label}
-      onPointerEnter={() => setPaused(true)} onPointerLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)} onBlur={() => setPaused(false)} onTouchStart={() => setPaused(true)}>
+      onPointerEnter={(e) => { if (e.pointerType === 'mouse') setPaused(true) }}
+      onPointerLeave={(e) => { if (e.pointerType === 'mouse') setPaused(false) }}
+      onTouchStart={() => { clearTimeout(resume.current); setPaused(true) }}
+      onTouchEnd={() => { resume.current = setTimeout(() => setPaused(false), 4000) }}>
       <div className="slider-track" ref={track} tabIndex={0}
         onScroll={(e) => setI(Math.round(e.currentTarget.scrollLeft / e.currentTarget.clientWidth))}
         onKeyDown={(e) => {

@@ -16,6 +16,8 @@ const LINE = CONTACT.lineHref
 const TEL = CONTACT.phoneHref
 // LINE-member promo banner (QR links to the same LINE page); slides on every room page
 const MEMBER = { img: '/products/member-line-red/image.png', name: 'สมัครสมาชิก รับส่วนลด 3% — แอด LINE @furnitureoutlet', href: CONTACT.lineHref }
+// 0% instalment banner (Krungsri, SCB, Krungthai, Bangkok Bank, Kasikorn); slides next to MEMBER on every room page
+const INSTALMENT = { img: '/products/installment-0/image.webp', name: 'ผ่อน 0% นาน 10 เดือน ผ่านบัตรเครดิต กรุงศรี ไทยพาณิชย์ กรุงไทย กรุงเทพ กสิกรไทย', href: CONTACT.lineHref }
 const photo = (base: string, w: number) => `${base}?w=${w}&q=72&auto=format&fit=crop`
 
 export function CategoryPage() {
@@ -120,7 +122,7 @@ export function CategoryPage() {
       {c.id === 'builtin' ? (
         <>
           <section className="shelf shelf-banners" ref={listRef} aria-label="แบนเนอร์ Built-in">
-            <BannerSlider slides={[...banners, MEMBER]} label="แบนเนอร์ Built-in" />
+            <BannerSlider slides={[...banners, MEMBER, INSTALMENT]} label="แบนเนอร์ Built-in" />
           </section>
           <section className="shelf shelf-works" aria-labelledby="shelf-title">
             <div className="shelf-head"><h2 id="shelf-title">Built-in ที่เราทำ</h2></div>
@@ -132,7 +134,7 @@ export function CategoryPage() {
       ) : (
         <>
         <section className="shelf shelf-banners" ref={listRef} aria-label="โปรโมชันสมาชิก LINE">
-          <BannerSlider slides={[MEMBER]} label="โปรโมชันสมาชิก LINE" />
+          <BannerSlider slides={[MEMBER, INSTALMENT]} label="โปรโมชัน" />
         </section>
         <section className="shelf shelf-works" aria-labelledby="shelf-title">
           <div className="shelf-head">
