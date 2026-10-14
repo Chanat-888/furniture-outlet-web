@@ -13,6 +13,16 @@ export type Product = {
 
 export const products: Record<string, Product[]> = {
   bedroom: [
+    {"name": "ตู้เสื้อผ้าไม้จริง 3 บานเปิด รุ่น นิวอพอลโล (หน้าบานลายใหม่)", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new01.webp", "price": 0},
+    {"name": "ตู้เสื้อผ้าไม้ยางพารา 3 บานเปิด รุ่น เมล่อน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new02.webp", "price": 0, "size": "135 x 60 x 212 ซม.", "color": "ไลท์โอ๊ค"},
+    {"name": "ตู้เสื้อผ้าไม้จริง 3 บาน กระจกกลาง รุ่น ดิออน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new03.webp", "price": 0},
+    {"name": "ตู้เสื้อผ้าไม้จริง 3 บานเปิด รุ่น แกรนด์", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new04.webp", "price": 0, "size": "149.5 x 58.5 x 213 ซม."},
+    {"name": "ตู้เสื้อผ้าไม้จริง 2 บาน รุ่น นิวอะเมซอน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new05.webp", "price": 0, "size": "110 x 60 x 210 ซม.", "color": "บราวน์"},
+    {"name": "ตู้เสื้อผ้าไม้จริง 3 บานเปิด รุ่น นิวอะเมซอน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new06.webp", "price": 0},
+    {"name": "ตู้เสื้อผ้าไม้จริง 4 บาน รุ่น นิวอะเมซอน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new07.webp", "price": 0},
+    {"name": "โต๊ะเครื่องแป้ง+สตูล รุ่น เมล่อน", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new08.webp", "price": 0, "color": "บราวน์"},
+    {"name": "โต๊ะแป้ง+สตูล รุ่น อิลลินอยส์", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new09.webp", "price": 0, "color": "บราวน์"},
+    {"name": "โต๊ะแป้งพร้อมสตูล รุ่น แมนดาริน", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new10.webp", "price": 0, "size": "โต๊ะ 80 x 53 x 180 / สตูล 40 x 40 x 45 ซม."},
     {"name": "ตู้เสื้อผ้าเข้ามุม L-Shape El Egance", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/p010.webp", "price": 49900, "was": 64900, "size": "310 x 60-160 x 230-270 ซม.", "color": "เทา/กระจก/ดำ"},
     {"name": "ตู้เสื้อผ้า 4 บานเปิด FAMILY", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/p038.webp", "price": 4990, "size": "180 x 60 x 200 ซม.", "color": "น้ำตาลอ่อน"},
     {"name": "ตู้เสื้อผ้า 6 บานเปิด JULIAN", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/p042.webp", "price": 5490, "size": "180 x 45 x 184 ซม.", "color": "น้ำตาลเข้ม"},
@@ -874,6 +884,12 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้เอนกประสงค์ แม็คซิม-6 (Maxim-6) (Golden Star)", "sub": "ตู้เก็บของสำนักงาน", "img": "/products/office/g028.webp", "price": 0, "size": "200 x 58 x 75 ซม.", "color": "น้ำตาลเข้ม-ดำ"},
   ],
   dining: [
+    {"name": "เก้าอี้บาร์ HB-1714", "sub": "เก้าอี้บาร์", "img": "/products/dining/new01.webp", "price": 1290, "was": 4900, "size": "43 x 46 x 107 ซม."},
+    {"name": "เก้าอี้บาร์ HB-1733", "sub": "เก้าอี้บาร์", "img": "/products/dining/new02.webp", "price": 1450, "was": 4900, "size": "56 x 54 x 93-114 ซม."},
+    {"name": "เก้าอี้บาร์ WHISKEG", "sub": "เก้าอี้บาร์", "img": "/products/dining/new03.webp", "price": 1990, "was": 3900, "size": "44 x 44 x 103 ซม."},
+    {"name": "เก้าอี้บาร์ HB-1763", "sub": "เก้าอี้บาร์", "img": "/products/dining/new04.webp", "price": 2290, "was": 4900, "size": "48 x 45 x 81-97 ซม."},
+    {"name": "เก้าอี้บาร์ HB-1775", "sub": "เก้าอี้บาร์", "img": "/products/dining/new05.webp", "price": 2690, "was": 4900, "size": "56 x 54 x 93-114 ซม."},
+    {"name": "เก้าอี้บาร์ รุ่น 4920", "sub": "เก้าอี้บาร์", "img": "/products/dining/new06.webp", "price": 3290, "was": 4900, "size": "51 x 51 x 90-120 ซม."},
     {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง Lisa", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p016.webp", "price": 18500, "size": "โต๊ะ 180 x 90 x 75 ซม. / เก้าอี้ 50 x 55 x 91.5 ซม.", "color": "น้ำตาลเข้ม"},
     {"name": "ชุดโต๊ะอาหาร 6 ที่นั่ง Harmony", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p017.webp", "price": 19990, "size": "โต๊ะ 180 x 90 x 75 ซม.", "color": "น้ำตาลเข้ม"},
     {"name": "ชุดโต๊ะอาหาร 4 ที่นั่ง Julie MBR", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/p018.webp", "price": 8990, "size": "โต๊ะ 115 x 75 x 75 ซม. / เก้าอี้ 48 x 52 x 86 ซม.", "color": "น้ำตาลอ่อน"},
@@ -926,6 +942,9 @@ export const products: Record<string, Product[]> = {
     {"name": "โต๊ะแฟนซี-1 พร้อมเก้าอี้แฟนซี-4 (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g038.webp", "price": 0, "size": "โต๊ะ ø 60 x 70 หรือ ø 80 x 70 / เก้าอี้ 46 x 54 x 76 ซม.", "color": "ขาว-ไม้, เก้าอี้น้ำตาล"},
   ],
   storage: [
+    {"name": "ตู้โชว์ดาวน์ไลท์ รุ่น GCB-003", "sub": "ตู้โชว์กระจก", "img": "/products/storage/new01.webp", "price": 5900, "was": 9900, "size": "40 x 45 x 180 ซม.", "color": "บราวน์มาร์เบิล/โกลด์, ซอฟท์มาร์เบิล/โกลด์, ดาร์คมาร์เบิล/โกลด์"},
+    {"name": "ตู้โชว์ดาวน์ไลท์ รุ่น GCB-004", "sub": "ตู้โชว์กระจก", "img": "/products/storage/new02.webp", "price": 7900, "was": 10900, "size": "60 x 48 x 191 ซม.", "color": "บราวน์มาร์เบิล/โกลด์, ซอฟท์มาร์เบิล/โกลด์, ดาร์คมาร์เบิล/โกลด์"},
+    {"name": "ตู้โชว์ดาวน์ไลท์ รุ่น GCB-803", "sub": "ตู้โชว์กระจก", "img": "/products/storage/new03.webp", "price": 8900, "was": 10900, "size": "80 x 43 x 200 ซม.", "color": "บราวน์มาร์เบิล/โกลด์, ซอฟท์มาร์เบิล/โกลด์, ดาร์คมาร์เบิล/โกลด์"},
     {"name": "ชุดโฮมเธียเตอร์ Sand (วางทีวีสูงสุด 76 นิ้ว)", "sub": "ชุดวางทีวี", "img": "/products/storage/p084.webp", "price": 26900, "was": 36900, "size": "360 x 57 x 230 ซม.", "color": "ครีม"},
     {"name": "ชุดโฮมเธียเตอร์ Columbus (วางทีวีสูงสุด 76 นิ้ว)", "sub": "ชุดวางทีวี", "img": "/products/storage/p087.webp", "price": 26900, "was": 34900, "size": "270 x 53 x 220 ซม.", "color": "ขาว/ดำ"},
     {"name": "ตู้โชว์ดาวน์ไลท์ GW-201", "sub": "ตู้โชว์", "img": "/products/storage/p088.webp", "price": 16900, "was": 25500, "size": "200 x 40 x 230 ซม.", "color": "ขาว/ซอฟท์มาร์เบิล/ซิลค์"},
