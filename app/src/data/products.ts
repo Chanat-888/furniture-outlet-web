@@ -244,8 +244,6 @@ export const products: Record<string, Product[]> = {
     {"name": "โซฟา L-shape ผ้าสีเทาน้ำตาล ที่วางแก้ว", "sub": "โซฟา", "img": "/products/living/n031.webp", "price": 0, "color": "เทาน้ำตาล"},
     {"name": "โซฟาตัวยูขนาดใหญ่ Marshall/ST สีเทาเข้ม", "sub": "โซฟา", "img": "/products/living/n033.webp", "price": 0, "color": "เทาเข้ม"},
     {"name": "โซฟา L-shape ผ้าสีน้ำตาลเทา เบาะปรับพนัก", "sub": "โซฟา", "img": "/products/living/n034.webp", "price": 0, "color": "น้ำตาลเทา"},
-    {"name": "โซฟาฟังก์ชั่น BRIO ปรับนอนได้ สีเทาน้ำตาล พร้อมสตูล", "sub": "โซฟา", "img": "/products/living/n041.webp", "price": 0, "size": "225 x 90-160 x 90 cm.", "color": "เทาน้ำตาล"},
-    {"name": "โซฟาฟังก์ชั่น BRIO ปรับนอนได้ สีเทาเข้ม พร้อมสตูล", "sub": "โซฟา", "img": "/products/living/n042.webp", "price": 0, "size": "225 x 90-160 x 90 cm.", "color": "เทาเข้ม"},
     {"name": "UNI BOX ตู้เล็กบานเปิดทึบ UNI-1", "sub": "ตู้เก็บของ", "img": "/products/living/k001.webp", "price": 0, "size": "44 x 40.7 x 44 ซม.", "color": "ขาวนวล, ดำ, แดง, ม่วงพาสเทล, ส้ม, ฟ้า, เขียวมะนาว, เทาฟ้า"},
     {"name": "UNI BOX ตู้เล็กบานเปิดกระจก UNI-2", "sub": "ตู้เก็บของ", "img": "/products/living/k002.webp", "price": 0, "size": "44 x 40.7 x 44 ซม.", "color": "ขาวนวล, ดำ, แดง, ม่วงพาสเทล, ส้ม, ฟ้า, เขียวมะนาว, เทาฟ้า"},
     {"name": "UNI BOX ตู้เล็กโล่ง UNI-3", "sub": "ตู้เก็บของ", "img": "/products/living/k003.webp", "price": 0, "size": "44 x 40.7 x 44 ซม."},
