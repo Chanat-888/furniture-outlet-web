@@ -12,3 +12,16 @@
 .dock-toggle path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .dock-toggle path[d^='M4'] { fill: currentColor; stroke: none; }
 @media (prefers-reduced-motion: reduce) { .dock-btn, .dock-toggle i { transition: none; } }
+
+/* login icon: a touch larger, in the shop red, with a gentle breathing ring */
+.dock-account { position: relative; width: 52px; height: 52px; color: var(--brand); animation: acc-in .6s var(--ease-out) both; }
+.dock-account svg { width: 30px; height: 30px; transition: transform .25s var(--ease-out); }
+.dock-account::after {
+  content: ''; position: absolute; inset: 6px; border-radius: 50%; border: 2px solid var(--brand);
+  opacity: 0; animation: acc-ring 2.8s 1s ease-out infinite; pointer-events: none;
+}
+.dock-account:hover, .dock-account:focus-visible { color: #fff; background: var(--brand); }
+.dock-account:hover svg, .dock-account:focus-visible svg { transform: translateY(-2px) scale(1.08); }
+@keyframes acc-in { from { opacity: 0; transform: translateY(-10px) scale(.7); } }
+@keyframes acc-ring { 0% { opacity: .5; transform: scale(.85); } 70%, 100% { opacity: 0; transform: scale(1.35); } }
+@media (prefers-reduced-motion: reduce) { .dock-account, .dock-account::after { animation: none; } .dock-account svg { transition: none; } }
