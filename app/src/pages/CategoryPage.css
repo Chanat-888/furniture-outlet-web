@@ -378,3 +378,22 @@
 }
 @media (prefers-reduced-motion: reduce) { .menu-panel { animation: none; } }
 .hero-bar { z-index: 3; } /* above the hero title, so the room menu is never overlapped */
+
+/* chip row: the sticky bar holds the row and two scroll buttons; a button hides at its end of the row */
+.chips-wrap {
+  position: sticky; top: 0; z-index: 2; margin: 0 calc(var(--gutter) * -1) 24px;
+  background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(10px);
+}
+.chips-wrap .chips { position: static; margin: 0; background: none; backdrop-filter: none; scroll-padding-inline: 56px; }
+.chips-nav {
+  position: absolute; top: 50%; translate: 0 -50%; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--card); color: var(--ink); cursor: pointer;
+  box-shadow: 0 6px 16px -6px rgba(var(--scrim), .35); transition: opacity .2s, background .2s, color .2s;
+}
+.chips-nav:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+.chips-nav .arrow { width: 16px; height: 16px; }
+.chips-prev { left: 8px; } .chips-next { right: 8px; }
+.chips-wrap::before, .chips-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 64px; pointer-events: none; transition: opacity .2s; }
+.chips-wrap::before { left: 0; background: linear-gradient(90deg, var(--ground), transparent); }
+.chips-wrap::after { right: 0; background: linear-gradient(-90deg, var(--ground), transparent); }
+.chips-wrap.at-start .chips-prev, .chips-wrap.at-start::before, .chips-wrap.at-end .chips-next, .chips-wrap.at-end::after { opacity: 0; pointer-events: none; }
