@@ -8,10 +8,11 @@ const fbSrc = 'https://www.facebook.com/plugins/page.php?' + new URLSearchParams
   small_header: 'false', adapt_container_width: 'true', hide_cover: 'false', show_facepile: 'false',
 })
 
-const TRIES = 4, WAIT = 8000
+const TRIES = 3, WAIT = 5000
 
 export function SocialSection() {
   const tiktokRef = useRef<HTMLDivElement>(null)
+  const [ready, setReady] = useState(false)
   const [failed, setFailed] = useState(false)
 
   // TikTok's embed.js only scans the page once when it loads, so re-add it on every mount.
@@ -23,7 +24,7 @@ export function SocialSection() {
     document.body.appendChild(s)
 
     let alive = false, tries = 1
-    const onMessage = (e: MessageEvent) => { if (e.origin === 'https://www.tiktok.com') alive = true }
+    const onMessage = (e: MessageEvent) => { if (e.origin === 'https://www.tiktok.com') { alive = true; setReady(true) } }
     window.addEventListener('message', onMessage)
     const timer = setInterval(() => {
       if (alive) return clearInterval(timer)
@@ -42,7 +43,7 @@ export function SocialSection() {
         <blockquote className="tiktok-embed" hidden={failed} cite={CONTACT.tiktok} data-unique-id={tiktokUser} data-embed-type="creator">
           <section><a target="_blank" rel="noopener" href={CONTACT.tiktok}>@{tiktokUser}</a></section>
         </blockquote>
-        {failed && (
+        {!ready && (
           <a className="social-tiktok-card" href={CONTACT.tiktok} target="_blank" rel="noopener">
             <b>TikTok</b>
             <span>@{tiktokUser}</span>
