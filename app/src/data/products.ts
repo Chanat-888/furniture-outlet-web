@@ -209,6 +209,7 @@ export const products: Record<string, Product[]> = {
     {"name": "โต๊ะเครื่องแป้ง บูม-100 (Boom-100) (Diamond Star)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/d018.webp", "price": 0, "size": "100 x 45 x 160 ซม.", "color": "โอ๊ค-เทา / ดำ-ขาว"},
     {"name": "โต๊ะเครื่องแป้ง บูม-1 (Boom-1) (Diamond Star)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/d019.webp", "price": 0, "size": "80 x 40 x 166 ซม.", "color": "โอ๊ค-เทา / ดำ-ขาว"},
     {"name": "โต๊ะเครื่องแป้ง บูม-60 cm (Boom-60cm) (Diamond Star)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/d020.webp", "price": 0, "size": "60 x 40 x 170 ซม.", "color": "โอ๊ค-เทา / ดำ-ขาว"},
+    {"name": "ชุดห้องนอน Narita นาริตะ BR251-4 (เตียง 6 ฟุต+ตู้ข้างเตียง+โต๊ะแป้ง+ตู้เสื้อผ้า 4 บาน+ตู้วางทีวี)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/pn001.webp", "price": 0, "size": "เตียง 6 ฟุต B2123: 187 x 212 x 100 / ตู้ข้างเตียง 45 x 35 x 100 / โต๊ะแป้ง D8123: 80 x 40 x 165 / ตู้เสื้อผ้า 4 บาน 160 x 50 x 210 / ตู้วางทีวี V1723: 160 x 40 x 50 ซม.", "color": "เบจโอ๊ค / เทาอ่อน / ลายไม้ระแนง"},
   ],
   living: [
     {"name": "โซฟา รุ่น BELLA", "sub": "โซฟา", "img": "/products/living/new01.webp", "price": 13500, "size": "220 x 93 x 100 ซม."},
