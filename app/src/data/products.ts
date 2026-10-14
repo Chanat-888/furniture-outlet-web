@@ -107,6 +107,9 @@ export const products: Record<string, Product[]> = {
     {"name": "เตียงไม้จริง Eco คาสโนว่า (CASANOVA) 6 ฟุต", "sub": "เตียง", "img": "/products/bedroom/pf034.webp", "price": 0, "size": "6 ฟุต: 189 x 213 x 109.5 ซม.", "color": "น้ำตาลเข้ม (สีบราวน์)"},
     {"name": "เตียงไม้จริง Eco ซัปโปโร (SAPPORO) หัวเตียงมีช่องเสียบ USB", "sub": "เตียง", "img": "/products/bedroom/pf037.webp", "price": 0, "size": "3.5 ฟุต: 118.5 x 214.5 x 102 ซม. / 6 ฟุต: 193.5 x 214.5 x 102 ซม.", "color": "น้ำตาลเข้ม (สีบราวน์)"},
     {"name": "เตียงไม้จริง Nature ไทกิ (TAIKI) 6 ฟุต", "sub": "เตียง", "img": "/products/bedroom/pf039.webp", "price": 0, "size": "6 ฟุต: 187 x 208 x 95 ซม.", "color": "ไลท์โอ๊ค"},
+    {"name": "เตียงไม้จริง Nature ชินจู (SHINJU) 6 ฟุต", "sub": "เตียง", "img": "/products/bedroom/pm104.webp", "price": 0, "size": "6 ฟุต: 189 x 224.5 x 95 ซม."},
+    {"name": "เตียงไม้จริง Nature จูกิ (JUKI) 3.5 / 6 ฟุต", "sub": "เตียง", "img": "/products/bedroom/pm105.webp", "more": ["/products/bedroom/pm105b.webp"], "price": 0, "size": "3.5 ฟุต: 114 x 215 x 99 ซม. / 6 ฟุต", "color": "ไลท์โอ๊ค"},
+    {"name": "เตียงไม้จริง Nature เคนตะ (KENTA) 3.5 / 5 / 6 ฟุต", "sub": "เตียง", "img": "/products/bedroom/pm106.webp", "price": 0, "size": "5 ฟุต: 158 x 211.5 x 96.6 ซม. / 6 ฟุต: 188 x 211.5 x 96.6 ซม."},
     {"name": "ชุดห้องนอน Taylor เทย์เลอร์ (เตียง+ตู้เสื้อผ้า+โต๊ะเครื่องแป้ง)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/p066.webp", "price": 13900, "size": "เตียง 200 x 215 x 110 / ตู้ 135 x 60 x 210 / โต๊ะ 90 x 50 x 170 ซม.", "color": "เบจ/ครีม"},
     {"name": "ชุดห้องนอน Taylor เทย์เลอร์ (เตียง+ตู้เสื้อผ้า+โต๊ะเครื่องแป้ง)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/p067.webp", "price": 13900, "size": "เตียง 200 x 215 x 110 / ตู้ 135 x 60 x 210 / โต๊ะ 90 x 50 x 170 ซม.", "color": "เทา/เบจ"},
     {"name": "ชุดห้องนอน Kensington เคนซินตัน (ตู้เสื้อผ้า+โต๊ะเครื่องแป้ง+เตียง 6 ฟุต)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/p070b/image.webp", "price": 24900, "size": "ตู้ 220 x 59 x 220 / โต๊ะ 80 x 50 x 180 ซม.", "color": "ขาว/ดำ"},
@@ -243,6 +246,7 @@ export const products: Record<string, Product[]> = {
     {"name": "โต๊ะเครื่องแป้ง บูม-1 (Boom-1) (Diamond Star)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/d019.webp", "price": 0, "size": "80 x 40 x 166 ซม.", "color": "โอ๊ค-เทา / ดำ-ขาว"},
     {"name": "โต๊ะเครื่องแป้ง บูม-60 cm (Boom-60cm) (Diamond Star)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/d020.webp", "price": 0, "size": "60 x 40 x 170 ซม.", "color": "โอ๊ค-เทา / ดำ-ขาว"},
     {"name": "ชุดห้องนอน Narita นาริตะ BR251-4 (เตียง 6 ฟุต+ตู้ข้างเตียง+โต๊ะแป้ง+ตู้เสื้อผ้า 4 บาน+ตู้วางทีวี)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/pn001.webp", "more": ["/products/bedroom/pn001b.webp", "/products/bedroom/pn001c.webp"], "price": 0, "size": "เตียง 6 ฟุต B2123: 187 x 212 x 100 / ตู้ข้างเตียง 45 x 35 x 100 / โต๊ะแป้ง D8123: 80 x 40 x 165 / ตู้เสื้อผ้า 4 บาน 160 x 50 x 210 / ตู้วางทีวี V1723: 160 x 40 x 50 ซม.", "color": "เบจโอ๊ค / เทาอ่อน / ลายไม้ระแนง"},
+    {"name": "ชุดห้องนอนสีขาว หัวเตียงบุผ้า ตู้เสื้อผ้าบานเลื่อนกระจก โต๊ะแป้งพร้อมสตูล", "sub": "ชุดห้องนอน", "img": "/products/bedroom/pm130.webp", "more": ["/products/bedroom/pm130b.webp"], "price": 0},
     {"name": "ชุดห้องนอน เบจ-เทา (ตู้เสื้อผ้า 4 บาน+โต๊ะแป้ง+ตู้ข้างเตียง) รอระบุรุ่น", "sub": "ชุดห้องนอน", "img": "/products/bedroom/pn002.webp", "price": 0, "color": "เบจ-เทา"},
   ],
   living: [
