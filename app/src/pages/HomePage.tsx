@@ -3,6 +3,7 @@ import { ContactDock } from '../components/ContactDock'
 import { SocialSection } from '../components/SocialSection'
 import { AddressSection } from '../components/AddressSection'
 import { FollowCue } from '../components/FollowCue'
+import { ContactFab } from '../components/ContactFab'
 
 export function HomePage() {
   return (
@@ -31,6 +32,7 @@ export function HomePage() {
       <AddressSection />
       <FollowCue />
       <ContactDock />
+      <ContactFab />
     </div>
   )
 }

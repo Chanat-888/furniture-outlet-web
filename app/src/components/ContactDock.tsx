@@ -1,30 +1,15 @@
-import { useState } from 'react'
 import { Link } from 'react-router'
 import { accountPath } from '../lib/accountPath'
-import { account, links } from './contactLinks'
+import { account } from './contactLinks'
 import './ContactDock.css'
 
+// Home page: only the account (login) icon stays top-right; contact links live in the floating ContactFab, as on the room pages.
 export function ContactDock() {
-  const [open, setOpen] = useState(true)
   return (
-    <aside className="dock" aria-label="ติดต่อเรา">
-      {open && links.map((l) => (
-        <a key={l.key} className={`dock-btn dock-${l.key}`} href={l.href} aria-label={l.label} title={l.label}
-          {...(l.key === 'phone' ? {} : { target: '_blank', rel: 'noopener' })}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">{l.icon}</svg>
-        </a>
-      ))}
-      {open && (
-        <Link className="dock-btn dock-account" to={accountPath()} aria-label={account.label} title={account.label}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">{account.icon}</svg>
-        </Link>
-      )}
-      <button type="button" className="dock-toggle" onClick={() => setOpen(!open)}
-        aria-expanded={open} aria-label={open ? 'ซ่อนช่องทางติดต่อ' : 'แสดงช่องทางติดต่อ'}>
-        <i><svg viewBox="0 0 24 24" aria-hidden="true">
-          {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 5h16v11H9l-5 4z" />}
-        </svg></i>
-      </button>
+    <aside className="dock" aria-label="บัญชี">
+      <Link className="dock-btn dock-account" to={accountPath()} aria-label={account.label} title={account.label}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">{account.icon}</svg>
+      </Link>
     </aside>
   )
 }
