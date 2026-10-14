@@ -13,6 +13,10 @@ export type Product = {
 
 export const products: Record<string, Product[]> = {
   bedroom: [
+    {"name": "ชุดห้องนอน 3 บานสไลด์ Excel (เตียง 6 ฟุต + ตู้เสื้อผ้า 3 บานสไลด์ + โต๊ะแป้ง Noble Lady)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/x01.webp", "more": ["/products/bedroom/x01b.webp", "/products/bedroom/x01c.webp"], "price": 0, "color": "เทาเข้ม, แซน"},
+    {"name": "ตู้เสื้อผ้า 3 บานสไลด์ กระจก ไฟ LED Excel", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/x02.webp", "more": ["/products/bedroom/x02b.webp", "/products/bedroom/x02c.webp"], "price": 0, "color": "เทาเข้ม, แซน (กระจกโรสโกลด์)"},
+    {"name": "โต๊ะแป้ง Noble Lady Excel", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/x03.webp", "more": ["/products/bedroom/x03b.webp"], "price": 0, "color": "แซน, เทาเข้ม (กระจกโรสโกลด์)"},
+    {"name": "ตู้เสื้อผ้า รุ่น คอสต้า (Costa) หน้าบานไฮกลอส", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/x04.webp", "more": ["/products/bedroom/x04b.webp"], "price": 0, "size": "220 x 55 x 235 ซม.", "color": "ครีม/แซน, เทาเข้ม (เฟรมโรสโกลด์)"},
     {"name": "โต๊ะแป้ง รุ่น โอซากะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new11.webp", "price": 0, "size": "80 x 40 x 147 ซม.", "color": "ไลท์โอ๊ค"},
     {"name": "โต๊ะแป้ง+สตูล รุ่น มูราตะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new12.webp", "price": 0, "size": "โต๊ะ 100 x 45 x 117 / สตูล 35 x 35 x 45 ซม."},
     {"name": "โต๊ะเครื่องแป้ง รุ่น ฮิเมจิ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new13.webp", "price": 0},
