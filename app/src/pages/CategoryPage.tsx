@@ -29,6 +29,18 @@ export function CategoryPage() {
   const heroRef = useRef<HTMLElement>(null)
   const listRef = useRef<HTMLElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
+  const chipsRef = useRef<HTMLDivElement>(null)
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(true)
+  // arrow buttons appear only when the chip row is wider than the screen
+  const edges = () => {
+    const el = chipsRef.current
+    if (!el) return
+    setAtStart(el.scrollLeft < 4)
+    setAtEnd(el.scrollLeft + el.clientWidth > el.scrollWidth - 4)
+  }
+  const nudge = (d: number) => chipsRef.current?.scrollBy({ left: d * chipsRef.current.clientWidth * 0.7, behavior: 'smooth' })
+  useEffect(() => { edges(); addEventListener('resize', edges); return () => removeEventListener('resize', edges) })
 
   const items = products[id ?? ''] ?? []
   // Built-in: the two ad banners (first in the data) slide on top; the rest are shown as cards under the title
@@ -143,19 +155,23 @@ export function CategoryPage() {
           </div>
 
           {items.length > 0 && chips.length > 0 && (
-            <div className="chips" role="group" aria-label="กรองตามประเภท">
-              <button type="button" aria-pressed={!active} onClick={() => setFilter(null)}>
-                ทั้งหมด <span>{items.length}</span>
-              </button>
-              {chips.map((f) => f.n > 0 ? (
-                <button type="button" key={f.label} aria-pressed={active?.label === f.label} onClick={() => setFilter(f.label)}>
-                  {f.label} <span>{f.n}</span>
+            <div className={'chips-wrap' + (atStart ? ' at-start' : '') + (atEnd ? ' at-end' : '')}>
+              <button type="button" className="chips-nav chips-prev" aria-label="เลื่อนไปทางซ้าย" tabIndex={-1} onClick={() => nudge(-1)}><Arrow dir="left" /></button>
+              <div className="chips" role="group" aria-label="กรองตามประเภท" ref={chipsRef} onScroll={edges}>
+                <button type="button" aria-pressed={!active} onClick={() => setFilter(null)}>
+                  ทั้งหมด <span>{items.length}</span>
                 </button>
-              ) : (
-                <a key={f.label} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">
-                  {f.label} <Arrow dir="out" />
-                </a>
-              ))}
+                {chips.map((f) => f.n > 0 ? (
+                  <button type="button" key={f.label} aria-pressed={active?.label === f.label} onClick={() => setFilter(f.label)}>
+                    {f.label} <span>{f.n}</span>
+                  </button>
+                ) : (
+                  <a key={f.label} href={c.href} target="_blank" rel="noopener" title="ดูที่เว็บไซต์ร้าน">
+                    {f.label} <Arrow dir="out" />
+                  </a>
+                ))}
+              </div>
+              <button type="button" className="chips-nav chips-next" aria-label="เลื่อนไปทางขวา" tabIndex={-1} onClick={() => nudge(1)}><Arrow dir="right" /></button>
             </div>
           )}
 
