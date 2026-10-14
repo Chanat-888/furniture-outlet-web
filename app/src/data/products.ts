@@ -922,6 +922,8 @@ export const products: Record<string, Product[]> = {
     {"name": "โต๊ะกลาง แชมเปญ (Champagne) พร้อมเก้าอี้ ฮัคล์-2 (Hulk-2) (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g010.webp", "price": 0, "size": "โต๊ะ 80 x 60 x 75 / เก้าอี้ 45 x 50 x 85 ซม.", "color": "ดำ, ขาว"},
     {"name": "โต๊ะน้ำชา มาเบิ้ล (Marble) พร้อมเก้าอี้ (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g011.webp", "price": 0, "size": "ø 70 x 75 ซม.", "color": "ขาวมาร์เบิ้ล"},
     {"name": "เก้าอี้ เทส-2 (Test-2) พร้อมโต๊ะกลาง บริง-2 (Bing-2) (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g012.webp", "price": 0, "size": "เก้าอี้ 73 x 59 x 75 / โต๊ะ ø 70 x 70 ซม.", "color": "ดำ-ทอง"},
+    {"name": "โต๊ะกลาง มาเบิ้ล-2 (Marble-2) พร้อมเก้าอี้ (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g037.webp", "price": 0, "size": "ø 70 x 75 ซม.", "color": "ขาวมาร์เบิ้ล-สแตนเลส"},
+    {"name": "โต๊ะแฟนซี-1 พร้อมเก้าอี้แฟนซี-4 (Golden Star)", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/g038.webp", "price": 0, "size": "โต๊ะ ø 60 x 70 หรือ ø 80 x 70 / เก้าอี้ 46 x 54 x 76 ซม.", "color": "ขาว-ไม้, เก้าอี้น้ำตาล"},
   ],
   storage: [
     {"name": "ชุดโฮมเธียเตอร์ Sand (วางทีวีสูงสุด 76 นิ้ว)", "sub": "ชุดวางทีวี", "img": "/products/storage/p084.webp", "price": 26900, "was": 36900, "size": "360 x 57 x 230 ซม.", "color": "ครีม"},
