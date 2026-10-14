@@ -13,6 +13,9 @@ export type Product = {
 
 export const products: Record<string, Product[]> = {
   bedroom: [
+    {"name": "โต๊ะแป้ง รุ่น โอซากะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new11.webp", "price": 0, "size": "80 x 40 x 147 ซม.", "color": "ไลท์โอ๊ค"},
+    {"name": "โต๊ะแป้ง+สตูล รุ่น มูราตะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new12.webp", "price": 0, "size": "โต๊ะ 100 x 45 x 117 / สตูล 35 x 35 x 45 ซม."},
+    {"name": "โต๊ะเครื่องแป้ง รุ่น ฮิเมจิ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new13.webp", "price": 0},
     {"name": "ตู้เสื้อผ้าไม้จริง 3 บานเปิด รุ่น นิวอพอลโล (หน้าบานลายใหม่)", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new01.webp", "price": 0},
     {"name": "ตู้เสื้อผ้าไม้ยางพารา 3 บานเปิด รุ่น เมล่อน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new02.webp", "price": 0, "size": "135 x 60 x 212 ซม.", "color": "ไลท์โอ๊ค"},
     {"name": "ตู้เสื้อผ้าไม้จริง 3 บาน กระจกกลาง รุ่น ดิออน", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/new03.webp", "price": 0},
@@ -885,6 +888,14 @@ export const products: Record<string, Product[]> = {
     {"name": "ตู้เอนกประสงค์ แม็คซิม-6 (Maxim-6) (Golden Star)", "sub": "ตู้เก็บของสำนักงาน", "img": "/products/office/g028.webp", "price": 0, "size": "200 x 58 x 75 ซม.", "color": "น้ำตาลเข้ม-ดำ"},
   ],
   dining: [
+    {"name": "ชุดอาหารหน้าโต๊ะหินอ่อนโครงเหล็ก รุ่น ลิลลี่ (Lilly) 4 / 6 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d01.webp", "more": ["/products/dining/d01b.webp"], "price": 0, "size": "โต๊ะ 4 ที่นั่ง 70 x 130 x 75 / เก้าอี้ 44 x 50 x 89 ซม."},
+    {"name": "ชุดอาหารหินอ่อน รุ่น รีเจนซี่ (Regency) 4 / 6 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d02.webp", "more": ["/products/dining/d02b.webp"], "price": 0, "size": "โต๊ะ 6 ที่นั่ง 90 x 150 x 76 ซม."},
+    {"name": "ชุดอาหารหินอ่อน รุ่น สเตลล่า 4 / 6 / 8 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d03.webp", "more": ["/products/dining/d03b.webp", "/products/dining/d03c.webp"], "price": 0, "color": "PR01"},
+    {"name": "ชุดอาหารหินอ่อน รุ่น โมริ 4 / 6 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d04.webp", "more": ["/products/dining/d04b.webp"], "price": 0, "color": "ไลท์โอ๊ค"},
+    {"name": "ชุดอาหารหินอ่อน + เก้าอี้หมุน รุ่น ไพลิน 4 / 6 / 8 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d05.webp", "more": ["/products/dining/d05b.webp", "/products/dining/d05c.webp"], "price": 0, "size": "โต๊ะ 6 ที่นั่ง 90 x 150 x 75 / 8 ที่นั่ง 90 x 180 x 75 / เก้าอี้ 47 x 55 x 88 ซม.", "color": "รัน"},
+    {"name": "ชุดอาหารหน้าหินซินเทอร์ โต๊ะดราก้อนพลัส + เก้าอี้หมุนดาม่อน 6 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d06.webp", "price": 0, "size": "โต๊ะ 90 x 180 x 75 / เก้าอี้ 48 x 51 x 90 ซม.", "color": "บราวน์"},
+    {"name": "ชุดอาหารหน้าโต๊ะหินอ่อน รุ่น นาริตะ 6 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d07.webp", "price": 0},
+    {"name": "ชุดอาหารหินอ่อน รุ่น อลิซาเบร 8 ที่นั่ง", "sub": "ชุดโต๊ะอาหาร", "img": "/products/dining/d08.webp", "price": 0},
     {"name": "เก้าอี้บาร์ NEPTUNE", "sub": "เก้าอี้บาร์", "img": "/products/dining/new07.webp", "more": ["/products/dining/m001.webp"], "price": 3990, "was": 4900, "size": "47 x 54 x 87-110 ซม."},
     {"name": "เก้าอี้บาร์ HB-1714", "sub": "เก้าอี้บาร์", "img": "/products/dining/new01.webp", "price": 1290, "was": 4900, "size": "43 x 46 x 107 ซม."},
     {"name": "เก้าอี้บาร์ HB-1733", "sub": "เก้าอี้บาร์", "img": "/products/dining/new02.webp", "price": 1450, "was": 4900, "size": "56 x 54 x 93-114 ซม."},
