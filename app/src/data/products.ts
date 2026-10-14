@@ -13,6 +13,9 @@ export type Product = {
 
 export const products: Record<string, Product[]> = {
   bedroom: [
+    {"name": "ตู้เสื้อผ้า 3 บานสไลด์ กระจก ไฟ LED Excel", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/x02.webp", "more": ["/products/bedroom/x02b.webp", "/products/bedroom/x02c.webp"], "price": 0, "color": "เทาเข้ม, แซน (กระจกโรสโกลด์)"},
+    {"name": "โต๊ะแป้ง Noble Lady Excel", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/x03.webp", "more": ["/products/bedroom/x03b.webp"], "price": 0, "color": "แซน, เทาเข้ม (กระจกโรสโกลด์)"},
+    {"name": "ตู้เสื้อผ้า รุ่น คอสต้า (Costa) หน้าบานไฮกลอส", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/x04.webp", "more": ["/products/bedroom/x04b.webp"], "price": 0, "size": "220 x 55 x 235 ซม.", "color": "ครีม/แซน, เทาเข้ม (เฟรมโรสโกลด์)"},
     {"name": "โต๊ะแป้ง รุ่น โอซากะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new11.webp", "price": 0, "size": "80 x 40 x 147 ซม.", "color": "ไลท์โอ๊ค"},
     {"name": "โต๊ะแป้ง+สตูล รุ่น มูราตะ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new12.webp", "price": 0, "size": "โต๊ะ 100 x 45 x 117 / สตูล 35 x 35 x 45 ซม."},
     {"name": "โต๊ะเครื่องแป้ง รุ่น ฮิเมจิ", "sub": "โต๊ะเครื่องแป้ง", "img": "/products/bedroom/new13.webp", "price": 0},
@@ -188,7 +191,7 @@ export const products: Record<string, Product[]> = {
     {"name": "โต๊ะเครื่องแป้ง DT-0801/1 (แถมสตูล)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/f005.webp", "price": 3990, "was": 4900, "size": "80 x 45 x 175 ซม.", "color": "ไม้โอ๊คอ่อน-ขาว"},
     {"name": "โต๊ะเครื่องแป้ง WD-6010 (แถมสตูล)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/f006.webp", "price": 2790, "was": 3900, "size": "60 x 45 x 161 ซม.", "color": "เทาเข้ม"},
     {"name": "โต๊ะเครื่องแป้ง WD-681 (แถมสตูล)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/f007.webp", "price": 2590, "was": 3900, "size": "60 x 40 x 170 ซม.", "color": "ไม้โอ๊คอ่อน"},
-    {"name": "ชุดห้องนอน 3 บานสไลด์ Noble Lady โนเบิล เลดี้ (Excel Furniture)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/f008.webp", "more": ["/products/bedroom/f008_1.webp"], "price": 0, "size": "โต๊ะแป้ง 115 x 40 x 180 / ตู้เสื้อผ้า 240 x 60 x 220 ซม. / เตียง 6 ฟุต พร้อมไฟปรับได้ 3 สี", "color": "เทาเข้ม-ดำ"},
+    {"name": "ชุดห้องนอน 3 บานสไลด์ Noble Lady โนเบิล เลดี้ (Excel Furniture)", "sub": "ชุดห้องนอน", "img": "/products/bedroom/f008.webp", "more": ["/products/bedroom/f008_1.webp", "/products/bedroom/x01.webp", "/products/bedroom/x01b.webp", "/products/bedroom/x01c.webp"], "price": 0, "size": "โต๊ะแป้ง 115 x 40 x 180 / ตู้เสื้อผ้า 240 x 60 x 220 ซม. / เตียง 6 ฟุต พร้อมไฟปรับได้ 3 สี", "color": "เทาเข้ม-ดำ"},
     {"name": "ตู้เสื้อผ้า นิว ฟาค่อน-200 (new Facon-200) (Diamond Star)", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/d001.webp", "price": 0, "size": "200 x 59 x 220 ซม.", "color": "โซลิค+เทา, โอ๊ค+เจนัว"},
     {"name": "ตู้เสื้อผ้า นิว ฟาค่อน-160 (new Facon-160) (Diamond Star)", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/d002.webp", "price": 0, "size": "160 x 59 x 220 ซม.", "color": "โซลิค+เทา, โอ๊ค+เจนัว"},
     {"name": "ตู้เสื้อผ้า ฟาค่อน-1 (Falcon-1) (เทาเข้ม-โอ๊ค) (Diamond Star)", "sub": "ตู้เสื้อผ้า", "img": "/products/bedroom/d003.webp", "price": 0, "size": "120 x 54 x 200 ซม.", "color": "เทาเข้ม-โอ๊ค (สีที่มี: โซลิค+เทา, โอ๊ค+เจนัว)"},
