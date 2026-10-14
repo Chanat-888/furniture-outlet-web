@@ -28,7 +28,7 @@ export const categories: Category[] = [
     photo: 'https://images.unsplash.com/photo-1596022326953-84f20bfebb77', credit: 'Sven Brandsma',
     href: link('ห้องทำงาน/64112a9c6202f50013e07db0'),
     icon: `<rect x="12" y="8" width="22" height="13"/><rect x="16" y="12" width="14" height="5" ${fill}/><path d="M23 21v4M6 26h52M10 26v28M54 26v28"/><rect x="40" y="26" width="14" height="18"/><path d="M44 35h6"/>` },
-  { id: 'dining', label: 'ชุดอาหาร', th: 'ชุดอาหาร', en: 'Dining Room', sub: ['ชุดโต๊ะอาหาร', 'ห้องครัวขนาดกะทัดรัดและครัวสำเร็จรูป', 'เก้าอี้ทานอาหาร'],
+  { id: 'dining', label: 'ชุดอาหาร', th: 'ชุดอาหาร', en: 'Dining Room', sub: ['ชุดโต๊ะอาหาร', 'ห้องครัวขนาดกะทัดรัดและครัวสำเร็จรูป', 'เก้าอี้ทานอาหาร', 'ชุดอาหารไม้จริง'],
     photo: 'https://images.unsplash.com/photo-1745794621090-d856c53b0cc2', credit: 'Clay Banks',
     href: link('ห้องอาหารและห้องครัว/64112aa16202f50013e07dbe'),
     icon: `<rect x="12" y="26" width="40" height="6" ${fill}/><path d="M16 32v22M48 32v22M6 18v36M6 42h8M58 18v36M58 42h-8"/>` },
