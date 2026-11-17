@@ -9,9 +9,7 @@ export function HomePage() {
   return (
     <div className="home">
       <div className="home-screen">
-        <header className="bar">
-          <span className="tagline">Furniture for every room</span>
-        </header>
+        <header className="bar" />
 
         <p className="idiom">
           <span className="idiom-l1">Make Your Space,</span>
