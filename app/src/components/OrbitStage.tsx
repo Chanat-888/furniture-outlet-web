@@ -4,11 +4,12 @@ import { categories } from '../data/categories'
 import { Box } from './Box'
 import './OrbitStage.css'
 
-// motion: boxes spin one full lap at the centre while the circle grows to R -> slow orbit
-const SLOW = 0.11 // rad/s (one lap per ~57s)
+// motion: the logo opens first (CSS), then the cards glide straight out to the ring and drift in a slow orbit
+const PRE = 1.6 // s: wait for the logo reveal before the cards open out
+const SPREAD = 2.4 // s: cards travel from the centre to the ring
+const SLOW = 0.07 // rad/s: idle orbit (one lap per ~90s)
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v))
-const inOut = (p: number) => (p < 0.5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2)
-const out = (p: number) => 1 - (1 - p) ** 3
+const out4 = (p: number) => 1 - (1 - p) ** 4
 
 export function OrbitStage() {
   const stageRef = useRef<HTMLElement>(null)
@@ -37,23 +38,20 @@ export function OrbitStage() {
     ro.observe(stage); size()
 
     const still = matchMedia('(prefers-reduced-motion: reduce)').matches
-    let t = still ? 9 : 0, th = 0, th0 = 0, // th0: slow-orbit angle
-       k = 1, last = performance.now(), raf = 0
+    let t = still ? 99 : 0, th = 0, k = 1, last = performance.now(), raf = 0
 
     const frame = (now: number) => {
       const dt = Math.min(0.05, (now - last) / 1e3); last = now; t += dt
-      const pr = inOut(clamp((t - 0.7) / 3.2)), sc = 0.3 + 0.7 * out(clamp((t - 0.7) / 2)), op = clamp(t / 0.5)
+      const u = t - PRE
+      const e = out4(clamp(u / SPREAD)), sc = 0.7 + 0.3 * e, op = clamp(u / 0.9)
       const h = stage.querySelector('.box:hover,.box:focus-visible,.box.on') // pause orbit while a box is held
-      k += ((h && t > 4.2 ? 0 : 1) - k) * Math.min(1, dt * 6)
-      // intro: exactly one lap, easing out to a stop; then the slow orbit takes over
-      if (!still && t > 4.2) th0 += SLOW * k * dt
-      th = (still ? 0 : 2 * Math.PI * out(clamp(t / 4.2))) + th0
-      ring.style.scale = String(pr); ring.style.opacity = String(op)
+      k += ((h && u > 0 ? 0 : 1) - k) * Math.min(1, dt * 6)
+      if (!still && u > 0) th += SLOW * k * dt
       const hw = HS / 2
       boxes.forEach((b, i) => {
-        const a = th + (i * 2 * Math.PI) / N - Math.PI / 2, x = R * pr * Math.cos(a), y = R * pr * Math.sin(a)
+        const a = th + (i * 2 * Math.PI) / N - Math.PI / 2, x = R * e * Math.cos(a), y = R * e * Math.sin(a)
         const f = (b.firstElementChild as HTMLElement).style
-        b.style.transform = `translate(${x}px,${y}px) rotate(${th * (1 - pr)}rad) scale(${sc})`
+        b.style.transform = `translate(${x}px,${y}px) scale(${sc})`
         b.style.opacity = String(op)
         // keep the enlarged card inside the stage
         f.setProperty('--dx', (b === h ? clamp(x, -W / 2 + hw, W / 2 - hw) - x : 0) + 'px')
