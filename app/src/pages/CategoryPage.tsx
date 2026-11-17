@@ -180,9 +180,6 @@ export function CategoryPage() {
               <div className="grid" ref={gridRef}>
                 {shown.map((p) => <ProductCard key={p.img} p={p} icon={c.icon} category={c.th} />)}
               </div>
-              <a className="shelf-more" href={c.href} target="_blank" rel="noopener">
-                ดู{c.th}ทั้งหมดที่ furniture-outletshop.com <Arrow dir="out" />
-              </a>
             </>
           ) : (
             <div className="empty">

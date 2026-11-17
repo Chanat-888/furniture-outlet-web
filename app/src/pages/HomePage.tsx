@@ -28,7 +28,6 @@ export function HomePage() {
               <span className="touch">แตะเพื่อดูรายละเอียด · แตะอีกครั้งเพื่อเลือกซื้อ</span>
             </span>
           </span>
-          <a className="site" href="https://www.furniture-outletshop.com/" target="_blank" rel="noopener">furniture-outletshop.com ↗</a>
         </footer>
       </div>
 
