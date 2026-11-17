@@ -13,6 +13,12 @@ export function HomePage() {
           <span className="tagline">Furniture for every room</span>
         </header>
 
+        <p className="idiom">
+          <span className="idiom-l1">Make Your Space,</span>
+          <span className="idiom-l2">Make Your Lifestyle</span>
+          <svg viewBox="0 0 230 16" aria-hidden="true"><path d="M3 11 C 50 4, 110 2, 160 6 S 215 12, 227 5" /></svg>
+        </p>
+
         <OrbitStage />
 
         <footer className="bar">
