@@ -4,12 +4,9 @@ import { SocialSection } from '../components/SocialSection'
 import { AddressSection } from '../components/AddressSection'
 import { FollowCue } from '../components/FollowCue'
 import { ContactFab } from '../components/ContactFab'
-import { useEffect } from 'react'
-import { arrival } from '../lib/arrival'
 
 export function HomePage() {
   // the next room page entered from here plays the house's fog reveal
-  useEffect(() => { arrival.mark() }, [])
   return (
     <div className="home">
       <div className="home-screen">

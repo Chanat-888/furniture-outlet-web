@@ -6,7 +6,7 @@ export type Branch = { name: string; address: string; href: string; mapQuery: st
 
 // One entry per branch. Add the address and a direct Google Maps link (href) when they are known.
 export const branches: Branch[] = [
-  { name: 'Koncept เฟอร์นิเจอร์ เอาท์เล็ท(เมืองจันทบุรี)', address: CONTACT.address, href: CONTACT.mapHref, mapQuery: CONTACT.mapCoords, photos: ['/image.jpg', '/shop-2/image.jpg'] },
+  { name: 'Koncept เฟอร์นิเจอร์ เอาท์เล็ท(เมืองจันทบุรี)', address: CONTACT.address, href: CONTACT.mapHref, mapQuery: CONTACT.mapCoords, photos: ['/image.jpg', '/shop-2/image.jpg'], phone: CONTACT.phoneLabel },
   {
     name: 'Koncept Furniture เขาไร่ยา,จันทบุรี',
     address: 'เลขที่ 230/1 ท่าช้าง เทศบาลเมืองท่าช้าง เมือง จันทบุรี 22000',
