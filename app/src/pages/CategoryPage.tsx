@@ -10,6 +10,7 @@ import { Arrow } from '../components/Arrow'
 import { BannerSlider } from '../components/BannerSlider'
 import { ProductCard } from '../components/ProductCard'
 import { RoomIcon } from '../components/RoomIcon'
+import { HouseHero } from '../components/HouseHero'
 import './CategoryPage.css'
 
 const LINE = CONTACT.lineHref
@@ -18,7 +19,6 @@ const TEL = CONTACT.phoneHref
 const MEMBER = { img: '/products/member-line-red/image.png', name: 'สมัครสมาชิก รับส่วนลด 3% — แอด LINE @furnitureoutlet', href: CONTACT.lineHref }
 // 0% instalment banner (Krungsri, SCB, Krungthai, Bangkok Bank, Kasikorn); slides next to MEMBER on every room page
 const INSTALMENT = { img: '/products/installment-0/image.webp', name: 'ผ่อน 0% นาน 10 เดือน ผ่านบัตรเครดิต กรุงศรี ไทยพาณิชย์ กรุงไทย กรุงเทพ กสิกรไทย', href: CONTACT.lineHref }
-const photo = (base: string, w: number) => `${base}?w=${w}&q=72&auto=format&fit=crop`
 
 export function CategoryPage() {
   const { id } = useParams()
@@ -93,10 +93,7 @@ export function CategoryPage() {
   return (
     <div className="room" key={c.id}>
       <section className="hero" ref={heroRef} aria-labelledby="room-title">
-        <img className="hero-img" alt="" fetchPriority="high"
-          src={photo(c.photo, 1600)}
-          srcSet={[800, 1200, 1600, 2400].map((w) => `${photo(c.photo, w)} ${w}w`).join(', ')}
-          sizes="100vw" />
+        <HouseHero current={c.id} />
         <div className="hero-scrim" />
 
         <header className="hero-bar">
@@ -113,12 +110,7 @@ export function CategoryPage() {
           </div>
         </header>
 
-        <div className="hero-title">
-          <RoomIcon icon={c.icon} className="hero-icon" />
-          <h1 id="room-title">{c.th}</h1>
-          <span className="hero-rule" />
-          <p className="hero-en" lang="en">{c.en}</p>
-        </div>
+        <h1 id="room-title" className="hero-sr">{c.th} <span lang="en">{c.en}</span></h1>
 
         <button type="button" className={scrolled ? 'hero-cue gone' : 'hero-cue'}
           onClick={() => listRef.current?.scrollIntoView({
@@ -128,7 +120,6 @@ export function CategoryPage() {
           <span className="cue-text">เลื่อนดูสินค้า<small lang="en">Scroll</small></span>
         </button>
 
-        <small className="hero-credit" lang="en">Photo: {c.credit} / Unsplash</small>
       </section>
 
       {c.id === 'builtin' ? (

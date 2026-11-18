@@ -11,12 +11,12 @@
   animation: settle 2.4s var(--ease-out) both;
 }
 @keyframes settle { from { scale: 1.12; filter: blur(6px) brightness(.7); } }
+/* only the top band is darkened, for the bar; the house itself stays bright */
 .hero-scrim {
-  position: absolute; inset: 0; z-index: -1;
-  background:
-    radial-gradient(ellipse 60% 45% at 50% 50%, rgba(var(--scrim), .42), transparent 70%),
-    linear-gradient(rgba(var(--scrim), .5), rgba(var(--scrim), .18) 30%, rgba(var(--scrim), .18) 65%, rgba(var(--scrim), .6));
+  position: absolute; inset: 0 0 auto; height: 130px; z-index: 0; pointer-events: none;
+  background: linear-gradient(rgba(10, 14, 24, .45), rgba(10, 14, 24, 0));
 }
+.hero-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 .hero-bar {
   position: absolute; inset: 0 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px;
@@ -66,22 +66,28 @@
 }
 @keyframes fade { from { opacity: 0; } }
 
+/* scroll-to-products: a red pill with a bouncing arrow and a soft pulse, so it reads as a button */
 .hero-cue {
-  position: absolute; left: 50%; bottom: clamp(20px, 4vh, 36px); translate: -50% 0;
-  display: grid; justify-items: center; gap: 10px; padding: 0; border: 0; background: none; color: inherit; cursor: pointer;
-  font: 500 12px/1.3 var(--font); transition: opacity .4s, translate .4s var(--ease-out);
-  animation: fade .8s 1.4s both;
+  position: absolute; left: 50%; bottom: clamp(16px, 3vh, 28px); translate: -50% 0; z-index: 2;
+  display: flex; align-items: center; gap: 12px; padding: 8px 22px 8px 8px; border: 0; border-radius: 999px;
+  background: var(--brand); color: #fff; cursor: pointer; text-shadow: none;
+  box-shadow: 0 14px 30px -10px rgba(225, 26, 69, .7), 0 0 0 6px rgba(255, 255, 255, .25);
+  font: 500 12px/1.3 var(--font); transition: opacity .4s, translate .4s var(--ease-out), background .25s, box-shadow .25s;
+  animation: fade .8s 2.4s both;
 }
+.hero-cue::before {
+  content: ''; position: absolute; inset: -6px; border-radius: 999px; border: 2px solid rgba(255, 255, 255, .75); pointer-events: none;
+  animation: cue-pulse 2.6s ease-out 3s infinite;
+}
+@keyframes cue-pulse { from { opacity: .9; scale: 1; } to { opacity: 0; scale: 1.25 1.6; } }
+.hero-cue:hover, .hero-cue:focus-visible { translate: -50% -3px; background: #c8103a; box-shadow: 0 18px 34px -10px rgba(225, 26, 69, .85), 0 0 0 6px rgba(255, 255, 255, .35); }
+@media (max-width: 640px) { .hero-cue { bottom: 92px; } }
 .hero-cue.gone { opacity: 0; translate: -50% 12px; pointer-events: none; }
-.cue-ring {
-  width: 48px; height: 48px; border: 1px solid rgba(255, 255, 255, .7); border-radius: 50%;
-  display: grid; place-items: center; transition: background .25s, border-color .25s, color .25s;
-}
-.cue-ring svg { width: 20px; height: 20px; animation: bob 1.8s 2.2s var(--ease) infinite; }
-@keyframes bob { 0%, 100% { translate: 0 -3px; } 50% { translate: 0 4px; } }
-.hero-cue:hover .cue-ring { background: var(--on-photo); border-color: var(--on-photo); color: var(--brand); }
-.cue-text { display: grid; justify-items: center; }
-.cue-text small { font-size: 9.5px; letter-spacing: var(--tracking); text-transform: uppercase; opacity: .75; }
+.cue-ring { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--brand); }
+.cue-ring svg { width: 20px; height: 20px; animation: bob 1.6s var(--ease) infinite; }
+@keyframes bob { 0%, 100% { translate: 0 -2px; } 50% { translate: 0 4px; } }
+.cue-text { display: grid; justify-items: start; font: 700 16px/1.2 var(--font); }
+.cue-text small { font: 600 9.5px/1.2 var(--font); letter-spacing: .2em; text-transform: uppercase; opacity: .85; }
 
 .hero-credit {
   position: absolute; right: var(--gutter); bottom: 14px; padding: 3px 8px; border-radius: 3px;
