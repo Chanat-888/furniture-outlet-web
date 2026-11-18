@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { categories } from '../data/categories'
 import { arrival } from '../lib/arrival'
@@ -47,10 +47,24 @@ export function HouseHero({ current }: { current: string }) {
     return () => { clearInterval(iv); clearTimeout(t) }
   }, [])
 
+  // Portrait screens: the house fills the full height and pans sideways. Start (and glide) to the current room.
+  const pan = useRef<HTMLDivElement>(null)
+  const panned = useRef(false)
+  const [swiped, setSwiped] = useState(false)
+  useLayoutEffect(() => {
+    const el = pan.current
+    const room = ROOMS.find((r) => r.id === current)
+    if (!el || !room || el.scrollWidth <= el.clientWidth + 1) return
+    const left = (room.dot[0] / 2000) * el.scrollWidth - el.clientWidth / 2
+    el.scrollTo({ left, behavior: panned.current ? 'smooth' : 'instant' })
+    panned.current = true
+  }, [current])
+
   const cls = (id: string) => [hover === id && 'on', current === id && 'cur'].filter(Boolean).join(' ')
 
   return (
     <div className={`house ${phase}`}>
+      <div className="house-pan" ref={pan} onTouchStart={() => setSwiped(true)} onWheel={() => setSwiped(true)}>
       <div className="house-stage">
         <div className={fog ? 'house-photo push' : 'house-photo'}>
           <img key={phase} className="house-img" src={src(phase, 1600)} fetchPriority="high"
@@ -124,8 +138,12 @@ export function HouseHero({ current }: { current: string }) {
           )
         })}
       </div>
+      </div>
 
       <Clock />
+      <p className={swiped ? 'hh-swipe gone' : 'hh-swipe'} aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" /></svg>ปัดซ้าย–ขวาเพื่อดูห้องอื่น
+      </p>
 
       {fog && cur && (
         <div className="hh-fog" aria-hidden="true">

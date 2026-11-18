@@ -9,6 +9,8 @@
 .house.eve { --sky: #dbb5a1; --grass: #3a3812; }
 .house.night { --sky: #0c1c36; --grass: #212f1a; }
 .house-blur { display: none; }
+.house-pan { position: absolute; inset: 0; overflow: hidden; }
+.hh-swipe { display: none; }
 /* the stage keeps the photo's aspect so rooms, lines and labels stay locked to the picture */
 .house-stage {
   position: absolute; left: 50%; top: 50%; translate: -50% -50%;
@@ -121,17 +123,29 @@
   .house-stage { -webkit-mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent); }
 }
 
-/* portrait phones and iPads: the house is wider than the screen, so labels give way to the pulsing dots on each room */
+/* portrait phones and iPads: the house fills the full height and swipes sideways (it opens on the current
+   room), so rooms stay big; labels give way to the pulsing dots on each room */
 @media (max-aspect-ratio: 1/1) {
-  .house-stage { width: 175vw; translate: -47% -50%; }
-  .house-stage { -webkit-mask-image: linear-gradient(transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(transparent, #000 6%, #000 94%, transparent); }
+  .house-pan {
+    overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y;
+  }
+  .house-pan::-webkit-scrollbar { display: none; }
+  .house-stage { left: 0; top: 0; translate: none; height: 100%; width: auto; }
   .hh-tag, .hh-lead { display: none; }
   .hh-clock { top: 68px; }
+  .hh-swipe {
+    position: absolute; left: 50%; bottom: 168px; translate: -50% 0; z-index: 2; margin: 0;
+    display: flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; white-space: nowrap;
+    background: rgba(28, 22, 30, .6); color: #fff; font: 500 13px/1 var(--font); text-shadow: none; pointer-events: none;
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    animation: fade .6s 1.2s both; transition: opacity .5s, translate .5s;
+  }
+  .hh-swipe svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; animation: hh-nudge 1.8s ease-in-out infinite; }
+  .hh-swipe.gone { opacity: 0; translate: -50% 8px; }
 }
-/* portrait iPads have room for a bigger house */
-@media (max-aspect-ratio: 1/1) and (min-width: 700px) {
-  .house-stage { width: 160vw; translate: -48% -50%; }
-}
+@media (max-aspect-ratio: 1/1) and (min-width: 700px) { .hh-swipe { bottom: 110px; } }
+@keyframes hh-nudge { 0%, 100% { translate: -3px 0; } 50% { translate: 3px 0; } }
 
 @media (prefers-reduced-motion: reduce) {
   .house-photo, .house-photo.push, .house-img, .hh-drift, .hh-mist-a, .hh-mist-b, .hh-sunglow, .hh-lamp, .hh-bulb, .hh-star, .hh-fly, .hh-smoke, .hh-dot { animation: none; }
