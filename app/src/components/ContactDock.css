@@ -13,8 +13,3 @@
 .dock-toggle path[d^='M4'] { fill: currentColor; stroke: none; }
 @media (prefers-reduced-motion: reduce) { .dock-btn, .dock-toggle i { transition: none; } }
 
-/* login icon: a touch larger, in the shop red */
-.dock-account { width: 52px; height: 52px; color: var(--brand); }
-.dock-account svg { width: 30px; height: 30px; }
-.dock-account:hover, .dock-account:focus-visible { color: #fff; background: var(--brand); }
-
