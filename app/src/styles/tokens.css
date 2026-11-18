@@ -36,14 +36,14 @@
   --gutter: clamp(16px, 4vw, 48px);
 }
 
-/* night theme (18:30-05:00 on the visitor's clock, set by src/lib/daytime.ts): warm charcoal, same red */
+/* night theme (18:30-05:00 on the visitor's clock, set by src/lib/daytime.ts): soft grey, same red */
 :root[data-theme='dark'] {
-  --ground: #16110f;
-  --card: #211b1a;
-  --surface: #2a2322;
-  --ink: #f4ece6;
-  --on-ink: #1c1517;
-  --muted: #b3a5a2;
-  --line: #3b3230;
+  --ground: #3c3d41;
+  --card: #48494e;
+  --surface: #525358;
+  --ink: #f6f6f7;
+  --on-ink: #2a2b2e;
+  --muted: #c9c9cd;
+  --line: #5e5f65;
   color-scheme: dark;
 }

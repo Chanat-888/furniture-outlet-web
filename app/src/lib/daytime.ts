@@ -11,7 +11,7 @@ export const phaseAt = (d: Date): Phase => {
 
 export const themeAt = (d: Date) => (phaseAt(d) === 'night' ? 'dark' : 'light')
 
-const GROUND = { light: '#f6f2ee', dark: '#16110f' }
+const GROUND = { light: '#f6f2ee', dark: '#3c3d41' }
 
 function apply() {
   const theme = themeAt(new Date())
