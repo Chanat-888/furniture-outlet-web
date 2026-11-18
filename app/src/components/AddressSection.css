@@ -16,7 +16,7 @@
 }
 .branch-list li:first-child { border-top-color: transparent; }
 .branch-list li.is-active {
-  background: #fff; border-top-color: transparent;
+  background: var(--surface); border-top-color: transparent;
   box-shadow: 0 6px 18px -8px rgba(var(--scrim), .22);
 }
 .branch-list li.is-active + li { border-top-color: transparent; }

@@ -5,6 +5,9 @@ import './index.css'
 import { HomePage } from './pages/HomePage'
 import { CategoryPage } from './pages/CategoryPage'
 import { Seo } from './components/Seo'
+import { startThemeClock } from './lib/daytime'
+
+startThemeClock()
 
 const router = createBrowserRouter([
   {
