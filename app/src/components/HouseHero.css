@@ -83,6 +83,7 @@
 }
 .hh-clock svg { width: 17px; height: 17px; fill: none; stroke: #e39b1e; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .hh-clock b { font: 600 14px/1 var(--font); font-variant-numeric: tabular-nums; }
+.hh-clock small { font-size: 11px; font-weight: 500; opacity: .6; }
 .hh-clock span { font: 500 12px/1 var(--font); color: var(--muted); }
 .night .hh-clock { background: rgba(28, 22, 30, .72); color: #fff3dd; }
 .night .hh-clock svg { stroke: #ffd98a; }

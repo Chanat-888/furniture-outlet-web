@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  transition: background-color .8s ease, color .8s ease;
   background: var(--ground);
   color: var(--ink);
   font: 400 var(--fs-body)/1.4 var(--font);
@@ -50,7 +51,7 @@ html { scroll-behavior: smooth; }
 /* handwritten idiom, top-left of the first screen: writes itself on after the logo reveal */
 .idiom {
   position: absolute; left: 18px; top: 26px; z-index: 6; margin: 0;
-  font: 400 clamp(26px, 2.9vw, 40px)/1.08 'Shadows Into Light', cursive; color: #111;
+  font: 400 clamp(26px, 2.9vw, 40px)/1.08 'Shadows Into Light', cursive; color: var(--ink);
   rotate: -4deg; transform-origin: left top; pointer-events: none;
 }
 .idiom span { display: block; white-space: nowrap; }

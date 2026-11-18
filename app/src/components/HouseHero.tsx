@@ -2,18 +2,13 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import { categories } from '../data/categories'
 import { arrival } from '../lib/arrival'
+import { phaseAt, type Phase } from '../lib/daytime'
 import './HouseHero.css'
 
 // Cut-away house that sits behind every room page's hero. Each room in the picture is a link to its
 // category, so visitors can switch rooms without going back to the orbit. Four pixel-aligned photos
 // (dawn, day, evening, night) follow the visitor's clock.
 
-type Phase = 'dawn' | 'day' | 'eve' | 'night'
-// 05:00-06:30 dawn, 06:30-17:00 day, 17:00-18:30 evening, 18:30-05:00 night
-const phaseAt = (d: Date): Phase => {
-  const m = d.getHours() * 60 + d.getMinutes()
-  return m < 300 ? 'night' : m < 390 ? 'dawn' : m < 1020 ? 'day' : m < 1110 ? 'eve' : 'night'
-}
 const greeting = (p: Phase, h: number) =>
   p === 'dawn' ? 'อรุณสวัสดิ์' : p === 'eve' ? 'ยามเย็น' : p === 'night' ? 'คืนนี้' : h < 12 ? 'สวัสดีตอนเช้า' : 'สวัสดีตอนบ่าย'
 const src = (p: Phase, w: number) => `/house/${p}-${w}.webp`
@@ -53,7 +48,6 @@ export function HouseHero({ current }: { current: string }) {
   }, [])
 
   const cls = (id: string) => [hover === id && 'on', current === id && 'cur'].filter(Boolean).join(' ')
-  const hm = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`
 
   return (
     <div className={`house ${phase}`}>
@@ -132,12 +126,7 @@ export function HouseHero({ current }: { current: string }) {
         })}
       </div>
 
-      <p className="hh-clock" aria-label={`ตอนนี้ ${hm} น.`}>
-        {phase === 'night'
-          ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" /></svg>
-          : <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" /></svg>}
-        <b>{hm} น.</b><span>{greeting(phase, now.getHours())}</span>
-      </p>
+      <Clock />
 
       {fog && cur && (
         <div className="hh-fog" aria-hidden="true">
@@ -148,5 +137,28 @@ export function HouseHero({ current }: { current: string }) {
         </div>
       )}
     </div>
+  )
+}
+
+const pad = (n: number) => String(n).padStart(2, '0')
+
+// Live clock chip: ticks on the second boundary, in its own component so only it re-renders each second.
+function Clock() {
+  const [now, setNow] = useState(() => new Date())
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout>
+    const tick = () => { const d = new Date(); setNow(d); t = setTimeout(tick, 1000 - d.getMilliseconds()) }
+    t = setTimeout(tick, 1000 - new Date().getMilliseconds())
+    return () => clearTimeout(t)
+  }, [])
+  const phase = phaseAt(now)
+  const hm = `${pad(now.getHours())}:${pad(now.getMinutes())}`
+  return (
+    <p className="hh-clock" aria-label={`ตอนนี้ ${hm} น.`}>
+      {phase === 'night'
+        ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" /></svg>
+        : <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" /></svg>}
+      <b>{hm}<small>:{pad(now.getSeconds())}</small> น.</b><span>{greeting(phase, now.getHours())}</span>
+    </p>
   )
 }

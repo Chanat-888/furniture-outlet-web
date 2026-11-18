@@ -10,7 +10,7 @@
 .follow-cue span { display: flex; flex-direction: column; }
 .follow-cue small { font-weight: 400; font-size: 11px; opacity: .85; letter-spacing: 0; }
 .follow-cue svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-.follow-cue:hover, .follow-cue:focus-visible { background: var(--ink); outline: none; }
+.follow-cue:hover, .follow-cue:focus-visible { background: var(--ink); color: var(--on-ink); outline: none; }
 .follow-cue.gone { opacity: 0; visibility: hidden; }
 @keyframes follow-bob { 50% { transform: translateY(-9px); } }
 @media (prefers-reduced-motion: reduce) { .follow-cue { animation: none; } }
