@@ -1,4 +1,3 @@
-import { AccountNav } from '../components/AccountNav'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { CategoryMenu } from '../components/CategoryMenu'
 import { ContactFab } from '../components/ContactFab'
@@ -108,7 +107,6 @@ export function CategoryPage() {
           <div className="hero-actions">
             <CategoryMenu currentId={c.id} />
             <ThemeToggle className="menu-btn" />
-            <AccountNav />
           </div>
         </header>
 

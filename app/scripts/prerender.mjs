@@ -138,7 +138,7 @@ writeFileSync(
   'dist/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map(entry).join('\n')}\n</urlset>\n`,
 )
-writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nDisallow: /signup\nDisallow: /profile\n\nSitemap: ${abs('/sitemap.xml')}\n`)
+writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`)
 
 for (const [path, m] of [['/', home], ...categories.map((c) => [`/category/${c.id}`, categoryMeta(c.id)])]) {
   if (m.title.length > 60 || m.description.length > 155) console.warn(`seo: ${path} title ${m.title.length} / description ${m.description.length} chars`)

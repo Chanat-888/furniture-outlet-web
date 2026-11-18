@@ -349,7 +349,7 @@
 .zoom-bar output { min-width: 3ch; text-align: center; }
 @media (prefers-reduced-motion: reduce) { .zoom[open], .zoom-btn { animation: none; transition: none; } }
 
-/* ---------- header: room menu next to the account icon ---------- */
+/* ---------- header: room menu and light/dark switch ---------- */
 .hero-actions { display: flex; align-items: center; justify-self: end; gap: 4px; }
 .menu { position: relative; }
 .menu-btn {

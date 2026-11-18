@@ -19,8 +19,6 @@ const HOME: Meta = {
 }
 
 const PRIVATE: Record<string, Meta> = {
-  '/signup': { path: '/signup', title: `สมัครสมาชิก | ${BRAND}`, description: 'สมัครสมาชิก Furniture Outlet', noindex: true },
-  '/profile': { path: '/profile', title: `บัญชีของฉัน | ${BRAND}`, description: 'บัญชีสมาชิก Furniture Outlet', noindex: true },
 }
 
 export function categoryMeta(id: string): Meta | undefined {
