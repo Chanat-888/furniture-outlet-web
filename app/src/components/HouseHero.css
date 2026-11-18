@@ -1,8 +1,14 @@
 /* ---------- house hero: cut-away house behind each room page ---------- */
-.house { position: absolute; inset: 0; z-index: -1; overflow: hidden; background: #cfe0ea; }
-.house.dawn { background: #cfcbe2; } .house.eve { background: #e9b48f; } .house.night { background: #141a33; }
-/* soft copy of the photo fills any space the stage leaves on tall screens */
-.house-blur { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; filter: blur(28px) saturate(1.1); opacity: .85; }
+.house {
+  position: absolute; inset: 0; z-index: -1; overflow: hidden;
+  /* sky above, grass below, sampled from each photo's edges, so screens taller than the photo extend the scene */
+  --sky: #bbd5f1; --grass: #758533;
+  background: linear-gradient(var(--sky) 0 50%, var(--grass) 50% 100%);
+}
+.house.dawn { --sky: #bbc8ec; --grass: #2d432d; }
+.house.eve { --sky: #dbb5a1; --grass: #3a3812; }
+.house.night { --sky: #0c1c36; --grass: #212f1a; }
+.house-blur { display: none; }
 /* the stage keeps the photo's aspect so rooms, lines and labels stay locked to the picture */
 .house-stage {
   position: absolute; left: 50%; top: 50%; translate: -50% -50%;
@@ -108,11 +114,23 @@
 @keyframes hh-fog-r { to { transform: translateX(75%) scale(1.25); opacity: 0; } }
 @keyframes hh-fog-title { 0% { opacity: 0; translate: -50% -46%; } 25%, 55% { opacity: 1; translate: -50% -50%; } 100% { opacity: 0; translate: -50% -56%; } }
 
-/* phones: the house is wider than the screen, so labels give way to the pulsing dots on each room */
+/* screens taller than the photo (iPad landscape, square windows): show the whole house edge to edge,
+   and feather its top and bottom into the sky and grass behind it */
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 3/2) {
+  .house-stage { width: 100%; }
+  .house-stage { -webkit-mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(transparent, #000 5%, #000 95%, transparent); }
+}
+
+/* portrait phones and iPads: the house is wider than the screen, so labels give way to the pulsing dots on each room */
 @media (max-aspect-ratio: 1/1) {
   .house-stage { width: 175vw; translate: -47% -50%; }
+  .house-stage { -webkit-mask-image: linear-gradient(transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(transparent, #000 6%, #000 94%, transparent); }
   .hh-tag, .hh-lead { display: none; }
   .hh-clock { top: 68px; }
+}
+/* portrait iPads have room for a bigger house */
+@media (max-aspect-ratio: 1/1) and (min-width: 700px) {
+  .house-stage { width: 160vw; translate: -48% -50%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

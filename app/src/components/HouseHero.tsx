@@ -51,7 +51,6 @@ export function HouseHero({ current }: { current: string }) {
 
   return (
     <div className={`house ${phase}`}>
-      <img className="house-blur" src={src(phase, 800)} alt="" aria-hidden="true" />
       <div className="house-stage">
         <div className={fog ? 'house-photo push' : 'house-photo'}>
           <img key={phase} className="house-img" src={src(phase, 1600)} fetchPriority="high"
