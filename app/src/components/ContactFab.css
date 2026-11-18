@@ -168,3 +168,6 @@
     transition-delay: 0s !important;
   }
 }
+
+/* touch screens: no hover, so the always-on "ติดต่อเรา" label would just sit on top of the content */
+@media (hover: none) { .fab-tip-main { display: none; } }

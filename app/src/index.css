@@ -70,3 +70,6 @@ html { scroll-behavior: smooth; }
   .idiom-l2 { padding-left: 0; }
   .idiom svg { margin: 2px auto 0; }
 }
+
+/* phones: keep the footer hint clear of the round chat button in the bottom-right corner */
+@media (max-width: 600px) { footer.bar { padding-right: 76px; padding-left: 8px; justify-content: flex-start; } }
