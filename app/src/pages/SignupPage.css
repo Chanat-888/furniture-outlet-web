@@ -17,7 +17,7 @@
 }
 .stepper li[aria-current='step'] { color: var(--ink); font-weight: 500; }
 .stepper li[aria-current='step'] b { background: var(--brand); border-color: var(--brand); color: #fff; }
-.stepper li.done b { background: var(--ink); border-color: var(--ink); color: #fff; }
+.stepper li.done b { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
 @media (max-width: 480px) { .stepper li small { display: none; } }
 
 /* card */
@@ -35,11 +35,11 @@
 .field em { font-style: normal; font-size: 12px; color: var(--muted); }
 .field input {
   box-sizing: border-box; width: 100%; min-height: 44px; padding: 0 12px;
-  border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); font: inherit; font-size: 16px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px;
 }
 .field select {
   box-sizing: border-box; width: 100%; min-height: 44px; padding: 0 12px;
-  border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); font: inherit; font-size: 16px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); font: inherit; font-size: 16px;
 }
 .field select:disabled { background: var(--ground); color: var(--muted); cursor: not-allowed; }
 .field select:focus-visible, .field input:focus-visible, .check input:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
@@ -60,7 +60,7 @@
 }
 .btn small, .signup-card .btn small { color: inherit; opacity: .85; font-size: 11px; }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn:hover:not(:disabled) { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn:hover:not(:disabled) { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
 .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 .link-list { display: grid; gap: 10px; }
