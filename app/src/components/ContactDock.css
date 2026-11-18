@@ -17,3 +17,4 @@
 .dock-account { width: 52px; height: 52px; color: var(--brand); }
 .dock-account svg { width: 30px; height: 30px; }
 .dock-account:hover, .dock-account:focus-visible { color: #fff; background: var(--brand); }
+
