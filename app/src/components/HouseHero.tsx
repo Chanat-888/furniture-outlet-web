@@ -1,7 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { categories } from '../data/categories'
-import { arrival } from '../lib/arrival'
 import { phaseAt, type Phase } from '../lib/daytime'
 import './HouseHero.css'
 
@@ -35,13 +34,13 @@ const FLIES: [number, number][] = [[120, 1020], [420, 1060], [900, 1040], [1350,
 
 export function HouseHero({ current }: { current: string }) {
   const [now, setNow] = useState(() => new Date())
-  const [fog, setFog] = useState(() => arrival.peek())
+  // fog reveal plays on every arrival: from the home ring, and when switching rooms from the house or menu
+  const [fog, setFog] = useState(true)
   const [hover, setHover] = useState<string | null>(null)
   const phase = phaseAt(now)
   const cur = categories.find((c) => c.id === current)
 
   useEffect(() => {
-    arrival.clear()
     const iv = setInterval(() => setNow(new Date()), 30_000)
     const t = setTimeout(() => setFog(false), 3600)
     return () => { clearInterval(iv); clearTimeout(t) }
