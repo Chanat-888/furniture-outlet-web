@@ -1,4 +1,5 @@
 import { AccountNav } from '../components/AccountNav'
+import { ThemeToggle } from '../components/ThemeToggle'
 import { CategoryMenu } from '../components/CategoryMenu'
 import { ContactFab } from '../components/ContactFab'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -106,6 +107,7 @@ export function CategoryPage() {
           </Link>
           <div className="hero-actions">
             <CategoryMenu currentId={c.id} />
+            <ThemeToggle className="menu-btn" />
             <AccountNav />
           </div>
         </header>
